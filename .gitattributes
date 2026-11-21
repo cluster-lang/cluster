@@ -16,3 +16,7 @@ lib/runtime/** linguist-vendored
 *.o linguist-vendored
 bin/** linguist-vendored
 dist/** linguist-vendored
+
+# Exclude installation scripts from language statistics
+install.sh linguist-vendored
+scripts/** linguist-vendored
