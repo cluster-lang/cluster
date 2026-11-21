@@ -1,0 +1,44 @@
+# ==============================================================================
+# Cluster Language Toolchain: Git Ignore
+# ==============================================================================
+
+# Internal Compiler Implementation Sources (Private development)
+cluster_compiler/
+cluster_backend/
+cluster-compiler-binary/
+cluster-lang/
+compiler/
+scripts/
+*.py
+*.pyc
+__pycache__/
+
+# LLVM Bundled Toolchain Artifacts (Large Binaries > 50MB - Install system clang or download release)
+bin/clang
+bin/clang++
+bin/cl-link
+bin/cl-lld
+bin/ld.lld
+bin/ld64.lld
+bin/lld
+bin/lld-link
+bin/llvm-strip
+
+# Build and temporary caches
+.cl_cache/
+.zk_cache/
+.vscode/
+build/
+dist/
+*.ll
+*.s
+*.lock
+
+# Allow runtime library object
+!lib/runtime/*.o
+
+# Logs and system artifacts
+*.log
+*.tmp
+.DS_Store
+bin/cl-lld
