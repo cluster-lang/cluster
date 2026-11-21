@@ -108,7 +108,7 @@ Discover what Cluster can build with zero external dependencies:
 This software is released under the **Cluster Community & Fair-Source License (CCFL v1.0 / MIT-Conditional)**:
 
 - **100% Free for Independent & Research Use:**
-  - Individual developers, students, educators, academic researchers, non-profits, and scientific research groups have full rights to inspect, run, modify, compile, and contribute without any fees.
+  - Individual developers, students, educators, academic researchers, non-profits, and scientific research groups have full rights to inspect, test, run, compile, and contribute without any fees (any modification or derivative reproduction strictly requires prior written permission, including for research).
 - **Commercial Enterprise License Required:**
   - Commercial companies, startups, and for-profit businesses using Cluster or its binaries in revenue-generating operations or proprietary commercial products must acquire a commercial license.
   - Contact: **`zkalamgir@proton.me`** (`mohammadzaid/(cluster)`).

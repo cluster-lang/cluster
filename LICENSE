@@ -12,6 +12,10 @@ organization, or scientific research group to obtain, download, test, run, and
 execute the official binary release of this software and associated documentation
 files (the "Software"), and to use the compiler binary to compile, build, test,
 and run Cluster programs, subject to the conditions herein.
+Any modification, alteration, patching, decompilation, or derivative compilation
+of the Software (including for academic, educational, or research purposes) strictly
+requires prior written permission and explicit authorization from the copyright holder.
+
 
 2. COMPILER INTEGRITY, ANTI-TAMPERING & REPRODUCTION RESTRICTIONS:
 The Cluster compiler, toolchain, and architecture belong exclusively to
