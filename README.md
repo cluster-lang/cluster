@@ -58,46 +58,82 @@ cl run main.cl
 # Compile to standalone native binary with full -O3 optimization
 cl build main.cl -o main
 ./main
+
+# Compile with DWARF debug symbols for VS Code F5, GDB, or LLDB debugging
+cl build main.cl -g -o main_debug
 ```
 
 ### 4. Interactive REPL
 
-Start an immediate interactive Cluster session with zero setup:
+Start an immediate interactive Cluster session with zero setup (pure native, zero Python):
 
 ```bash
 cl repl
 ```
+
+Interactive commands:
+- `:help`: Display help and command references
+- `:clear`: Reset accumulated session state
+- `:list`: View active session statement history
+- `:exit`: Exit the REPL
 
 ### 5. Package Management (550,000+ Modules)
 
 Discover and install ecosystem modules directly into your project:
 
 ```bash
-# Search package registry
+# Search package registry by keyword
 cl search adler
+cl search cipher
 
-# Add and install module to ./deps/
+# Add and install module to ./deps/ and register in cl.toml
 cl add cl-adler32
 
 # List project dependencies
 cl list
+
+# Restore/install all dependencies declared in cl.toml
+cl install
+```
+
+In your Cluster code, import the package immediately:
+```cluster
+import "cl-adler32"
+
+fn main():
+    checksum := adler32("Cluster Payload")
+    println("Checksum: " + to_text(checksum))
 ```
 
 ### 6. Built-in Test Suite Runner
 
-Execute test suites with millisecond precision:
+Execute test suites (`test_*.cl` and `test_*.zk`) with millisecond precision:
 
 ```bash
+# Run all tests in the project
 cl test
+
+# Run a specific test directory
+cl test tests/concurrency
 ```
 
-### 7. Native Language Server Protocol (LSP)
+### 7. Deterministic Code Formatter
+
+Format source code cleanly:
+
+```bash
+# Format file and write in place
+cl fmt src/main.cl -w
+```
+
+### 8. Native Language Server Protocol (LSP)
 
 Start the JSON-RPC language server daemon for real-time diagnostics, autocomplete, and hover docs:
 
 ```bash
 cl lsp
 ```
+Configure your editor (VS Code, Cursor, Neovim) to run `cl lsp` for language server features.
 
 ---
 
@@ -105,6 +141,7 @@ cl lsp
 
 Try Cluster directly in your browser without installing anything:
 * Open the [Cluster Web Playground](docs/playground/index.html) to write, compile, and execute Cluster code with live terminal output.
+* Run built-in interactive examples: *Hello World*, *Recursive Fibonacci*, *In-Memory KV Store*, *Vectors & Models*, and *Matrix Math*.
 
 ---
 
