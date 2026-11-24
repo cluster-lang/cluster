@@ -262,10 +262,10 @@ function runCode() {
   terminal.innerText = "[*] Compiling with Cluster v1.0.0 (LLVM 23.0 WASM target)...\n";
   timingBadge.innerText = "Compiling...";
 
-  const startTime = performance.now();
-
+  // Yield to browser UI thread so "Compiling..." badge can paint
   setTimeout(() => {
     try {
+      const startTime = performance.now();
       const execResult = executeClusterCode(code);
       const duration = (performance.now() - startTime).toFixed(1);
       let output = "Finished build [-O3] target wasm32-wasi in " + duration + "ms\n";
