@@ -121,195 +121,140 @@ clearBtn.addEventListener("click", () => {
   timingBadge.innerText = "Terminal cleared";
 });
 
-// Robust Client-Side Cluster Runtime & Interpreter for Playground
-function executeClusterCode(code) {
-  let output = "";
-  const models = {};
-  const fns = {};
+// High-Performance One-Shot JIT Transpiler for Cluster Web Playground
+function transpileClusterToJS(code) {
+  let js = "let __output = \"\";\n";
+  js += "function put(s) { __output += String(s) + \"\\n\"; }\n";
+  js += "function println(s) { __output += String(s) + \"\\n\"; }\n";
+  js += "function to_text(s) { return String(s); }\n";
+  js += "function list_size(v) { return (v && v.length !== undefined) ? v.length : 0; }\n";
+  js += "function list_push(v, item) { if (v && v.push) v.push(item); }\n\n";
 
   const lines = code.split("\n");
-  let inFn = null;
-  let inModel = null;
+  let indentStack = [0];
+  let inModel = false;
 
-  for (let i = 0; i < lines.length; i++) {
-    const raw = lines[i];
-    const trimmed = raw.trim();
-    if (!trimmed || trimmed.startsWith("//")) continue;
+  for (let raw of lines) {
+    if (!raw.trim() || raw.trim().startsWith("//")) continue;
 
-    if (trimmed.startsWith("model ")) {
-      const match = trimmed.match(/^model\s+([A-Za-z0-9_]+):/);
-      if (match) {
-        inModel = match[1];
-        models[inModel] = {};
-        continue;
-      }
+    let indent = 0;
+    const matchIndent = raw.match(/^([ \t]*)/);
+    if (matchIndent) {
+      indent = matchIndent[1].replace(/\t/g, "    ").length;
     }
+    let line = raw.trim();
+
+    // Close blocks when indent decreases
+    while (indentStack.length > 1 && indent <= indentStack[indentStack.length - 1]) {
+      if (inModel && indentStack.length === 2) {
+        js += "};\n}\n";
+        inModel = false;
+      } else {
+        js += "}\n";
+      }
+      indentStack.pop();
+    }
+
+    // Model definition
+    const modelMatch = line.match(/^model\s+([A-Za-z0-9_]+):/);
+    if (modelMatch) {
+      inModel = true;
+      js += `function ${modelMatch[1]}() {\n  return {\n`;
+      indentStack.push(indent);
+      continue;
+    }
+
     if (inModel) {
-      if (raw.startsWith("    ") || raw.startsWith("\t")) {
-        const parts = trimmed.split(":");
-        const fieldName = parts[0].trim();
-        let defaultVal = "";
-        if (parts[1] && parts[1].includes(":=")) {
-          const valPart = parts[1].split(":=")[1].trim();
-          defaultVal = valPart.replace(/^"|"$/g, "");
-          if (!isNaN(Number(defaultVal))) defaultVal = Number(defaultVal);
-          if (defaultVal === "true") defaultVal = true;
-          if (defaultVal === "false") defaultVal = false;
-        } else if (parts[1] && parts[1].includes("vector")) {
-          defaultVal = [];
-        }
-        models[inModel][fieldName] = defaultVal;
-        continue;
-      } else {
-        inModel = null;
+      const parts = line.split(":");
+      const fName = parts[0].trim();
+      let defaultVal = "null";
+      if (parts[1] && parts[1].includes(":=")) {
+        defaultVal = parts[1].split(":=")[1].trim();
+      } else if (parts[1] && parts[1].includes("vector")) {
+        defaultVal = "[]";
+      } else if (parts[1] && parts[1].includes("int")) {
+        defaultVal = "0";
+      } else if (parts[1] && parts[1].includes("string")) {
+        defaultVal = "\"\"";
+      } else if (parts[1] && parts[1].includes("bool")) {
+        defaultVal = "false";
       }
+      js += `    ${fName}: ${defaultVal},\n`;
+      continue;
     }
 
-    if (trimmed.startsWith("fn ")) {
-      const match = trimmed.match(/^fn\s+([A-Za-z0-9_]+)\s*\((.*?)\)(?:\s*->\s*[A-Za-z0-9_]+)?:/);
-      if (match) {
-        inFn = match[1];
-        const params = match[2].split(",").map(p => p.trim().split(":")[0].trim()).filter(Boolean);
-        fns[inFn] = { params, body: [] };
-        continue;
-      }
+    // Function definition
+    const fnMatch = line.match(/^fn\s+([A-Za-z0-9_]+)\s*\((.*?)\)(?:\s*->\s*[A-Za-z0-9_]+)?:/);
+    if (fnMatch) {
+      const fnName = fnMatch[1];
+      const params = fnMatch[2].split(",").map(p => p.trim().split(":")[0].trim()).filter(Boolean).join(", ");
+      js += `function ${fnName}(${params}) {\n`;
+      indentStack.push(indent);
+      continue;
     }
-    if (inFn) {
-      if (raw.startsWith("    ") || raw.startsWith("\t")) {
-        fns[inFn].body.push(trimmed);
-        continue;
-      } else {
-        inFn = null;
-      }
-    }
-  }
 
-  function evalExpr(expr, scope) {
-    expr = expr.trim();
-    if (!expr) return "";
+    // If block
+    if (line.startsWith("if ") && line.endsWith(":")) {
+      const cond = line.substring(3, line.length - 1).trim();
+      js += `  if (${cond}) {\n`;
+      indentStack.push(indent);
+      continue;
+    }
+
+    // While block
+    if (line.startsWith("while ") && line.endsWith(":")) {
+      const cond = line.substring(6, line.length - 1).trim();
+      js += `  while (${cond}) {\n`;
+      indentStack.push(indent);
+      continue;
+    }
 
     // String interpolation %{var}
-    expr = expr.replace(/%\{([A-Za-z0-9_]+)\}/g, (_, v) => {
-      return scope[v] !== undefined ? scope[v] : "";
-    });
+    line = line.replace(/%\{([A-Za-z0-9_]+)\}/g, "\" + ($1) + \"");
+    // Replace vector constructors vector[X]()
+    line = line.replace(/vector\[[A-Za-z0-9_]+\]\(\)/g, "[]");
 
-    // to_text helper
-    expr = expr.replace(/to_text\((.*?)\)/g, (_, inner) => {
-      return "String(" + inner + ")";
-    });
-
-    // list_size helper
-    expr = expr.replace(/list_size\((.*?)\)/g, (_, inner) => {
-      return "(" + inner + ".length)";
-    });
-
-    // Model instantiations
-    for (const m in models) {
-      const regex = new RegExp("\\b" + m + "\\(\\)", "g");
-      expr = expr.replace(regex, "Object.assign({}, __models." + m + ")");
-    }
-    expr = expr.replace(/vector\[[A-Za-z0-9_]+\]\(\)/g, "[]");
-
-    // Replace function calls
-    for (const f in fns) {
-      const regex = new RegExp("\\b" + f + "\\(", "g");
-      expr = expr.replace(regex, "__fns." + f + "(");
+    // Variable definition / assignment
+    if (line.includes(":=")) {
+      const parts = line.split(":=");
+      let lhs = parts[0].trim();
+      const rhs = parts.slice(1).join(":=").trim();
+      if (lhs.includes(":")) {
+        lhs = lhs.split(":")[0].trim();
+      }
+      js += `  let ${lhs} = ${rhs};\n`;
+      continue;
     }
 
-    try {
-      const contextKeys = Object.keys(scope);
-      const contextVals = Object.values(scope);
-      const fnRunner = new Function("__models", "__fns", ...contextKeys, "return (" + expr + ");");
-      return fnRunner(models, callableFns, ...contextVals);
-    } catch (e) {
-      return expr;
+    // Return statement
+    if (line.startsWith("return ")) {
+      const retExpr = line.substring(7).trim();
+      js += `  return ${retExpr};\n`;
+      continue;
     }
+
+    // Standalone statement
+    js += `  ${line};\n`;
   }
 
-  const callableFns = {};
-  for (const f in fns) {
-    callableFns[f] = (...args) => {
-      const localScope = {};
-      fns[f].params.forEach((p, idx) => {
-        localScope[p] = args[idx];
-      });
-      return execBlock(fns[f].body, localScope);
-    };
-  }
-
-  function execBlock(bodyLines, scope) {
-    for (let i = 0; i < bodyLines.length; i++) {
-      const line = bodyLines[i].trim();
-      if (!line || line.startsWith("//")) continue;
-
-      if (line.startsWith("if ") && line.endsWith(":")) {
-        const cond = line.substring(3, line.length - 1);
-        const ifVal = evalExpr(cond, scope);
-        if (ifVal) {
-          const nextLine = bodyLines[++i].trim();
-          if (nextLine.startsWith("return ")) {
-            return evalExpr(nextLine.substring(7), scope);
-          }
-        } else {
-          i++;
-        }
-        continue;
-      }
-
-      if (line.startsWith("return ")) {
-        return evalExpr(line.substring(7), scope);
-      }
-
-      if (line.startsWith("put(") && line.endsWith(")")) {
-        const inner = line.substring(4, line.length - 1);
-        const val = evalExpr(inner, scope);
-        output += val + "\n";
-        continue;
-      }
-
-      if (line.startsWith("println(") && line.endsWith(")")) {
-        const inner = line.substring(8, line.length - 1);
-        const val = evalExpr(inner, scope);
-        output += val + "\n";
-        continue;
-      }
-
-      if (line.startsWith("list_push(") && line.endsWith(")")) {
-        const inner = line.substring(10, line.length - 1);
-        const [vecName, valExpr] = inner.split(",").map(s => s.trim());
-        const val = evalExpr(valExpr, scope);
-        if (vecName.includes(".")) {
-          const parts = vecName.split(".");
-          if (scope[parts[0]] && scope[parts[0]][parts[1]]) {
-            scope[parts[0]][parts[1]].push(val);
-          }
-        } else if (scope[vecName]) {
-          scope[vecName].push(val);
-        }
-        continue;
-      }
-
-      if (line.includes(":=") || line.includes("=")) {
-        const delim = line.includes(":=") ? ":=" : "=";
-        const [lhs, rhs] = line.split(delim).map(s => s.trim());
-        const cleanLhs = lhs.replace(/^[A-Za-z0-9_]+\s*:\s*vector\[.*?\]\s*:=/, "").replace(/^let\s+mut\s+/, "").split(":")[0].trim();
-        const val = evalExpr(rhs, scope);
-        if (cleanLhs.includes(".")) {
-          const [obj, prop] = cleanLhs.split(".");
-          if (scope[obj]) scope[obj][prop] = val;
-        } else {
-          scope[cleanLhs] = val;
-        }
-        continue;
-      }
+  while (indentStack.length > 1) {
+    if (inModel && indentStack.length === 2) {
+      js += "};\n}\n";
+      inModel = false;
+    } else {
+      js += "}\n";
     }
-    return null;
+    indentStack.pop();
   }
 
-  if (fns["main"]) {
-    callableFns["main"]();
-  }
-  return output;
+  js += `\nif (typeof main === "function") { main(); }\nreturn __output;\n`;
+  return js;
+}
+
+function executeClusterCode(code) {
+  const jsSource = transpileClusterToJS(code);
+  const runner = new Function(jsSource);
+  return runner();
 }
 
 function runCode() {
