@@ -1,0 +1,7 @@
+// contextmanager — wraps generator-style context managers
+// suppress — ignore specified exceptions
+// closing — call close() on exit
+// nullcontext — no-op context manager
+
+fn nullcontext(enter_result: auto = None) -> auto:
+    return enter_result

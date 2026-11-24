@@ -1,0 +1,9 @@
+name: "cl-orm"
+version: "0.1.0"
+description: "SQL ORM with model-to-table mapping"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-db@0.1.0"]
+cpp_requires:
+  - "sqlpp11"
+EOP

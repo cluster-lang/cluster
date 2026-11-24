@@ -1,0 +1,9 @@
+name: "cl-cache-server"
+version: "0.1.0"
+description: "Redis cache client (get, set, del, expire, pipeline)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []
+cpp_requires:
+  - "redis-plus-plus"
+EOP

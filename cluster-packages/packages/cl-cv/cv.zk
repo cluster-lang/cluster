@@ -1,0 +1,28 @@
+fn imread(path: string, flags: int = 1) -> auto:
+    cpp_inject "auto img = cv::imread(path, flags);"
+    return 0
+
+fn imwrite(path: string, img: auto) -> bool:
+    result: bool := false
+    cpp_inject "result = cv::imwrite(path, img);"
+    return result
+
+fn cvtColor(src: auto, dst: auto, code: int):
+    cpp_inject "cv::cvtColor(src, dst, code);"
+
+fn GaussianBlur(src: auto, dst: auto, ksize: int, sigma: double):
+    cpp_inject "cv::GaussianBlur(src, dst, cv::Size(ksize, ksize), sigma);"
+
+fn Canny(src: auto, dst: auto, t1: double, t2: double):
+    cpp_inject "cv::Canny(src, dst, t1, t2);"
+
+fn resize(src: auto, dst: auto, w: int, h: int):
+    cpp_inject "cv::resize(src, dst, cv::Size(w, h));"
+
+fn imshow(win: string, img: auto):
+    cpp_inject "cv::imshow(win, img);"
+
+fn waitKey(delay: int = 0) -> int:
+    result := 0
+    cpp_inject "result = cv::waitKey(delay);"
+    return result

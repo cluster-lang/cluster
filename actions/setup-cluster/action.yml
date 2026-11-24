@@ -1,0 +1,36 @@
+name: 'Setup Cluster Language'
+description: 'Install and configure the Cluster Language compiler (cl), standard libraries, and VS Code support'
+author: 'zk-mohammad <ZaidKhan-alamgir@proton.me>'
+
+branding:
+  icon: 'terminal'
+  color: 'green'
+
+inputs:
+  version:
+    description: 'Cluster version to install'
+    required: false
+    default: '1.0.0'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Download and install Cluster Toolchain
+      shell: bash
+      run: |
+        echo "Installing Cluster Language v${{ inputs.version }}..."
+        curl -fsSL https://raw.githubusercontent.com/cluster-lang/cluster/main/install.sh | bash
+        
+        # Add to GitHub environment PATH
+        if [ -d "$HOME/.local/bin" ]; then
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+        fi
+        if [ -d "/usr/local/bin" ]; then
+          echo "/usr/local/bin" >> $GITHUB_PATH
+        fi
+
+    - name: Verify Cluster Toolchain Installation
+      shell: bash
+      run: |
+        export PATH="$HOME/.local/bin:$PATH"
+        cl --version

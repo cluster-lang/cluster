@@ -1,0 +1,6 @@
+name: "cl-graph"
+version: "0.1.0"
+description: "Graph data structure with BFS/DFS/shortest path"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

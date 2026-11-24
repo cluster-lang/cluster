@@ -1,0 +1,5839 @@
+{
+  "registry": {
+    "name": "cluster-central",
+    "schema_version": "3.0.0",
+    "url": "https://github.com/cl-andro/cluster-lang",
+    "total_packages": 323
+  },
+  "packages": {
+    "cl-adler32": {
+      "name": "cl-adler32",
+      "description": "Adler-32 Rolling Checksum Algorithm (RFC 1950 zlib parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "adler32.zk",
+      "path": "std_modules/rs/cl-adler32",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "adler32.zk",
+          "checksum": "sha256:8194ab001930d71c6fad438ad9a6c9f2d805f29a3b75c299e91be5defe314c12",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-affine": {
+      "name": "cl-affine",
+      "description": "Affine Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "affine.zk",
+      "path": "std_modules/cl-affine",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "affine.zk",
+          "checksum": "sha256:d2c854380262438be4edc5a6a6b9f75a6ba6691ed9d40270ded44920b93c0b5a",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-agents": {
+      "name": "cl-agents",
+      "description": "Autonomous Multi-Agent Task Orchestration & Memory Framework",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "agents.zk",
+      "path": "std_modules/cl-agents",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "agents.zk",
+          "checksum": "sha256:68f21218916efcd4dc9f553546292d86d20e78f0465e16225ef32275164ac645",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ai": {
+      "name": "cl-ai",
+      "description": "Ollama bridge for local AI inference",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ai.zk",
+      "path": "std_modules/cl-ai",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ai.zk",
+          "checksum": "sha256:4286e9ef20e8ce7029a91a4ab11b687d9cb1399709b08f80ce13302c3e01d44f",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ansi": {
+      "name": "cl-ansi",
+      "description": "ANSI Terminal Color and Text Formatting (Python colorama/rich parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ansi.zk",
+      "path": "std_modules/py/cl-ansi",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ansi.zk",
+          "checksum": "sha256:8fad1660f4623362f6de878210445be174532c86d8dd67410f2dc61c69c2aa2c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ansi-cursor": {
+      "name": "cl-ansi-cursor",
+      "description": "ANSI Terminal Cursor Control Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ansi_cursor.zk",
+      "path": "std_modules/cl-ansi-cursor",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ansi_cursor.zk",
+          "checksum": "sha256:f09fc6eef82bf60d20191183240c164862f13d6d0e2202a24a3a369473b1cd0c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-argon2": {
+      "name": "cl-argon2",
+      "description": "Argon2id Secure Password Hashing & Key Derivation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "argon2.zk",
+      "path": "std_modules/cl-argon2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "argon2.zk",
+          "checksum": "sha256:0cac46ef4673e0d38a4da75cc944f2252c2eda05f165394ff399c2b5ce8b9b6d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-argparse": {
+      "name": "cl-argparse",
+      "description": "Command-line argument parser",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "argparse.zk",
+      "path": "std_modules/cl-argparse",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "argparse.zk",
+          "checksum": "sha256:71ce6bc852a0eb7f1a879841e2b5da0ebf7ee46cca326724fc9f8e297c1accfc",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ascii": {
+      "name": "cl-ascii",
+      "description": "ASCII Character Category Classification Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ascii.zk",
+      "path": "std_modules/cl-ascii",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ascii.zk",
+          "checksum": "sha256:4758b26494af116e973ffbc7f26f3175cc380340b794f1be1c74220bf9955c3e",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-atbash": {
+      "name": "cl-atbash",
+      "description": "Atbash Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "atbash.zk",
+      "path": "std_modules/cl-atbash",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "atbash.zk",
+          "checksum": "sha256:0dd68e05c429198f777da702d617f2c98ff968ed656f79b2629b5a64d515f915",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-audio": {
+      "name": "cl-audio",
+      "description": "Audio I/O (PortAudio-backed)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "audio.zk",
+      "path": "std_modules/cl-audio",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "audio.zk",
+          "checksum": "sha256:66bb094bb47140c5a9cf69660a61ce4fb23a6741a0d4b8c677fb10efeaf01842",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-avl-tree": {
+      "name": "cl-avl-tree",
+      "description": "Balanced AVL Tree Wrapper Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "avl_tree.zk",
+      "path": "std_modules/cl-avl-tree",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "avl_tree.zk",
+          "checksum": "sha256:43735aee042fc8d86b808847755eff1ebc2377bc52c61cd6d45b7fbc24db5e1d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bacon": {
+      "name": "cl-bacon",
+      "description": "Bacon Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "bacon.zk",
+      "path": "std_modules/cl-bacon",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bacon.zk",
+          "checksum": "sha256:6497dde875e7e21617d78c10d3ce7851eefe6f1ae1fae1abc3cb7a0dff9b2efe",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base32": {
+      "name": "cl-base32",
+      "description": "RFC 4648 Standard Base32 Encoder (Python base64/base32 parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "base32.zk",
+      "path": "std_modules/py/cl-base32",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base32.zk",
+          "checksum": "sha256:7c1889b758803b4be4a13a636d3118ffcb201998bbd3064bde182b9ac4cc799b",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base32-hex": {
+      "name": "cl-base32-hex",
+      "description": "Base32 Extended Hex Alphabet Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base32_hex.zk",
+      "path": "std_modules/cl-base32-hex",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base32_hex.zk",
+          "checksum": "sha256:1adff6a626a96e20212a14f330702f41f67c53910df51bfab1eeebedb99ad261",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base36": {
+      "name": "cl-base36",
+      "description": "Base36 Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base36.zk",
+      "path": "std_modules/cl-base36",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base36.zk",
+          "checksum": "sha256:2f17e770f39810c4db93a18c878b02a104e2b86026622586fb98e323ca51e219",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base45": {
+      "name": "cl-base45",
+      "description": "Base45 Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base45.zk",
+      "path": "std_modules/cl-base45",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base45.zk",
+          "checksum": "sha256:ee033448286276fe1ee4966c684dcad25e0136779ef35a8c0fd823ba960c004c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base58": {
+      "name": "cl-base58",
+      "description": "Bitcoin/IPFS Base58 Encoding and Decoding Alphabet Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "base58.zk",
+      "path": "std_modules/rs/cl-base58",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base58.zk",
+          "checksum": "sha256:90ed2b5348cd078a066856aa4324ea9d5aecf907adfd47d3e07e20b3e5704de0",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base58-check": {
+      "name": "cl-base58-check",
+      "description": "Base58Check Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base58_check.zk",
+      "path": "std_modules/cl-base58-check",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base58_check.zk",
+          "checksum": "sha256:d563250c05cd25537428b5564b0cce2de2aa8f7c5736c3a42d85e9453fd28330",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base62": {
+      "name": "cl-base62",
+      "description": "Base62 Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base62.zk",
+      "path": "std_modules/cl-base62",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base62.zk",
+          "checksum": "sha256:fa1e978e01ae206069dfa92cae5012b92a8fe6b6ce7e5c9483368f59ca837115",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base64": {
+      "name": "cl-base64",
+      "description": "Base64 encoding and decoding",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base64.zk",
+      "path": "std_modules/cl-base64",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base64.zk",
+          "checksum": "sha256:b7904e3f543d8c1f94b47b71af35f249d696c3836a150f98d741cdf98c36033d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base85": {
+      "name": "cl-base85",
+      "description": "Base85 Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base85.zk",
+      "path": "std_modules/cl-base85",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base85.zk",
+          "checksum": "sha256:f528d757bf17016e5171fa9686a7b8d1059815ec4897b44822d0992815753fb1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base91": {
+      "name": "cl-base91",
+      "description": "Base91 Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "base91.zk",
+      "path": "std_modules/cl-base91",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base91.zk",
+          "checksum": "sha256:dbd20b5dbae72ebcbc70ac2a65ede40bb37674fd7290c5751623fe39c007af4d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-binary-search": {
+      "name": "cl-binary-search",
+      "description": "Binary Search Helper for Sorted Vectors",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "binary_search.zk",
+      "path": "std_modules/cl-binary-search",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "binary_search.zk",
+          "checksum": "sha256:d9a218cb72bfae88651f0487c7f4d9fa980f9cb0a65ec23c7764b5d260c605b3",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-binary-tree": {
+      "name": "cl-binary-tree",
+      "description": "Binary Search Tree (BST) Container Model",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "binary_tree.zk",
+      "path": "std_modules/cl-binary-tree",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "binary_tree.zk",
+          "checksum": "sha256:85d463f6a7635fae6f3e8af04da77745aa6e2cbdd6343e9dadd2b2745a1f71e1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bloom": {
+      "name": "cl-bloom",
+      "description": "Probabilistic Bloom Filter Engine (Rust bloomfilter crate parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bloom.zk",
+      "path": "std_modules/rs/cl-bloom",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bloom.zk",
+          "checksum": "sha256:fc108c9ec1dada4e36e4976bc85d88d208473b6b78c8e6a74add9fc67ba6f7fa",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bluetooth": {
+      "name": "cl-bluetooth",
+      "description": "Bluetooth communication (BlueZ)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "bluetooth.zk",
+      "path": "std_modules/cl-bluetooth",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bluetooth.zk",
+          "checksum": "sha256:2d2468ff8cc9f2c366fc1f16001d78452859ab7e79fcb2d46985f1d105984757",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-box2d": {
+      "name": "cl-box2d",
+      "description": "2D physics and rigid body engine (Box2D parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "box2d.zk",
+      "path": "std_modules/cl-box2d",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "box2d.zk",
+          "checksum": "sha256:e88588be0a61c2990d604690ffb4e477264f4e9f1fe524fa95a18d4adcbd6be2",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bs4": {
+      "name": "cl-bs4",
+      "description": "HTML/XML Parser & DOM Query Engine (Python BeautifulSoup4 parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bs4.zk",
+      "path": "std_modules/cl-bs4",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bs4.zk",
+          "checksum": "sha256:4a8c7336dbad1e79747571d2380f2e4fb52957013ca6f7a74f7ff704a8dcdaa1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bwt": {
+      "name": "cl-bwt",
+      "description": "Burrows-Wheeler Transform Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "bwt.zk",
+      "path": "std_modules/cl-bwt",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bwt.zk",
+          "checksum": "sha256:669d658df3de80572d278c703ecf603c21b77c29275a139b6ddaa98e7397e270",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bwt-rle": {
+      "name": "cl-bwt-rle",
+      "description": "BWT and RLE Combined Compression Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "bwt_rle.zk",
+      "path": "std_modules/cl-bwt-rle",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bwt_rle.zk",
+          "checksum": "sha256:cd80ced73ec6dff42d3dff1544c073b7b7802c9a5bab0b29e060e305a0749a40",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bytes": {
+      "name": "cl-bytes",
+      "description": "Byte and Integer Packing/Unpacking Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "bytes.zk",
+      "path": "std_modules/cl-bytes",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bytes.zk",
+          "checksum": "sha256:c7ca2627fd7ab1cec4ed5eed97f9168ab15288433b7667fa2248ab040be31c3d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cache": {
+      "name": "cl-cache",
+      "description": "Multi-Layer L1 In-Memory LRU & L2 Cache Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "cache.zk",
+      "path": "std_modules/cl-cache",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cache.zk",
+          "checksum": "sha256:fe40289b43a9dd7c5e34e6f8a10882b7fa81aa8680a05c43853c56a4d0fbb294",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-caesar": {
+      "name": "cl-caesar",
+      "description": "Caesar Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "caesar.zk",
+      "path": "std_modules/cl-caesar",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "caesar.zk",
+          "checksum": "sha256:0150b6a6578bc4fa37018068e6d948c21a25f1661e56f6f1f24788793b069221",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cassandra": {
+      "name": "cl-cassandra",
+      "description": "Apache Cassandra & ScyllaDB Distributed NoSQL Connector",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "cassandra.zk",
+      "path": "std_modules/cl-cassandra",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cassandra.zk",
+          "checksum": "sha256:8dd7c7ae8b57b75b419d8728b32418f579ae15b115b3134215745f9701ea11e1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-clickhouse": {
+      "name": "cl-clickhouse",
+      "description": "ClickHouse High-Speed Analytics OLAP Database Connector",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "clickhouse.zk",
+      "path": "std_modules/cl-clickhouse",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "clickhouse.zk",
+          "checksum": "sha256:68f881c0394f936b77097cc9f05db7b28c699a5812fa803ffcc0328de9aaef8a",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-config": {
+      "name": "cl-config",
+      "description": "Configuration file reader (JSON/INI)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "config.zk",
+      "path": "std_modules/cl-config",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "config.zk",
+          "checksum": "sha256:fa437d536a70f345b20c10c59dae8ce31f18651e0ef5ffb62ab88c3043191fbc",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-consul": {
+      "name": "cl-consul",
+      "description": "HashiCorp Consul Service Discovery & Key-Value Mesh Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "consul.zk",
+      "path": "std_modules/cl-consul",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "consul.zk",
+          "checksum": "sha256:255518fc643c0145c8e6b5062cc697d90ba55604fe105b9f45d5551953ceb48c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cors": {
+      "name": "cl-cors",
+      "description": "Cross-Origin Resource Sharing (CORS) Middleware & Preflight Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "cors.zk",
+      "path": "std_modules/cl-cors",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cors.zk",
+          "checksum": "sha256:ec87d61f6bc7e12f622532abc9c6b171374a42be7d87b74e87cbbe081cf86cb7",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cosine-similarity": {
+      "name": "cl-cosine-similarity",
+      "description": "Cosine Similarity Metric Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "cosine_similarity.zk",
+      "path": "std_modules/cl-cosine-similarity",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cosine_similarity.zk",
+          "checksum": "sha256:3726f8798c5ac41b9ef278dd01a980fe3d19d549cf3acabe94bfd9bf8e53825f",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crc16": {
+      "name": "cl-crc16",
+      "description": "CRC-16-CCITT and CRC-16-IBM Polynomial Checksum Calculator",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "crc16.zk",
+      "path": "std_modules/rs/cl-crc16",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crc16.zk",
+          "checksum": "sha256:b43a5b2d105467b9321c5ce1e57a6cc64e14bfe92486fa1a8d943f329063af55",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crc8": {
+      "name": "cl-crc8",
+      "description": "CRC-8 Checksum Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "crc8.zk",
+      "path": "std_modules/cl-crc8",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crc8.zk",
+          "checksum": "sha256:09b032ac5cbaca62de65f46700e38cee95af20105422383fbc9bf23a9b3462b9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cron": {
+      "name": "cl-cron",
+      "description": "Cron Expression Parser and Schedule Matcher (Python croniter parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cron.zk",
+      "path": "std_modules/py/cl-cron",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cron.zk",
+          "checksum": "sha256:24dcf5c3e04cbff13769c3d5df8bc293d16ba51af218e45d276895880b15345b",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cron2": {
+      "name": "cl-cron2",
+      "description": "Cron Expression Validation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "cron2.zk",
+      "path": "std_modules/cl-cron2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cron2.zk",
+          "checksum": "sha256:aa75c657495e81bac8bef829723516eea3b57f6549514945703aff83185555ae",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crypto": {
+      "name": "cl-crypto",
+      "description": "Cryptography utilities for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "crypto.zk",
+      "path": "std_modules/cl-crypto",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crypto.zk",
+          "checksum": "sha256:d2d3115c25ed202f8f1f2a4e80e8f688af508c52bf01a440b23904bed09ca8ba",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-csv": {
+      "name": "cl-csv",
+      "description": "RFC 4180 Comma-Separated Values (CSV) Line Parser and Serializer",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "csv_parser.zk",
+      "path": "std_modules/py/cl-csv",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "csv_parser.zk",
+          "checksum": "sha256:f0b82b4a42477763b50dc50b94ae7d2af919f7fc2fc2ba1994ef50fa24f94d52",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-csv2": {
+      "name": "cl-csv2",
+      "description": "CSV Writer and Serializer Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "csv2.zk",
+      "path": "std_modules/cl-csv2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "csv2.zk",
+          "checksum": "sha256:d2b016ced865b29fbdd3928bb4ffb68c7acce243436889ca22bb36202bd74834",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dataframe": {
+      "name": "cl-dataframe",
+      "description": "2D Tabular Data Structure & Analytics Engine (Python Pandas parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "dataframe.zk",
+      "path": "std_modules/cl-dataframe",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "dataframe.zk",
+          "checksum": "sha256:866eb4fa3bfd46d8dbdb5dfcf5c00f616271048dc1e463b3d0465c53751092e6",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-date": {
+      "name": "cl-date",
+      "description": "Date Helper Utilities",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "date.zk",
+      "path": "std_modules/cl-date",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "date.zk",
+          "checksum": "sha256:0e79efe30cf0e7d6fa2d763ddba381374f319ac5b502b87da13a749c6a899e87",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-datetime": {
+      "name": "cl-datetime",
+      "description": "Date and time utilities for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "datetime.zk",
+      "path": "std_modules/cl-datetime",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "datetime.zk",
+          "checksum": "sha256:8d1c72dc15797904893130d8ac6e311b4dc7154ea3b54e6f2bd38f5ddf45e92c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-db": {
+      "name": "cl-db",
+      "description": "Database engine (.clt) and SQLite bridge",
+      "latest": "0.2.0",
+      "license": "Commercial Control and non copy license",
+      "main": "db.zk",
+      "path": "std_modules/cl-db",
+      "versions": {
+        "0.2.0": {
+          "version": "0.2.0",
+          "main": "db.zk",
+          "checksum": "sha256:9d5f351195669a28abad3f29abceeab1d127e0d39274b7b5651ebcc187daf6ce",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-decimal": {
+      "name": "cl-decimal",
+      "description": "Fixed-Point Decimal Arithmetic Helper",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "decimal.zk",
+      "path": "std_modules/cl-decimal",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "decimal.zk",
+          "checksum": "sha256:e78fc4fe05b92407beb8c1c4ee0fa5bdd93e7797501d1890d95f0ba3c838dda2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-deque": {
+      "name": "cl-deque",
+      "description": "Double-Ended Queue (Rust VecDeque parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "vec_deque.zk",
+      "path": "std_modules/rs/cl-deque",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vec_deque.zk",
+          "checksum": "sha256:ce836f2502c0580f9089f9fb2f31aa282d702ec490269fa41219b15f69357818",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-diff": {
+      "name": "cl-diff",
+      "description": "Sequence Comparison and Unified Diff Chunk Generator (Python difflib parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "diff.zk",
+      "path": "std_modules/py/cl-diff",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "diff.zk",
+          "checksum": "sha256:17bd7c11ea39edfea35cdf8cc3e5fdd37974d97662ed4bb98810c46d4e36204b",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-diff-render": {
+      "name": "cl-diff-render",
+      "description": "Unified Diff Rendering Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "diff_render.zk",
+      "path": "std_modules/cl-diff-render",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "diff_render.zk",
+          "checksum": "sha256:e0413bfa0f6f6c53825a20782e58015b0d109ad56f2fd1b49d9245b754522676",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-djb2": {
+      "name": "cl-djb2",
+      "description": "DJB2 Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "djb2.zk",
+      "path": "std_modules/cl-djb2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "djb2.zk",
+          "checksum": "sha256:a5937036430ae519525bb2988e631f32366b0525c94b039833fd7f763954f9d4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dns": {
+      "name": "cl-dns",
+      "description": "DNS resolver client supporting A and AAAA query lookups",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "dns.zk",
+      "path": "std_modules/cl-dns",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "dns.zk",
+          "checksum": "sha256:b971f6129b98e46ae8bbeff31d50d1f0af734ad01b8d6ec4abefe90bec07ff69",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-docker": {
+      "name": "cl-docker",
+      "description": "Docker Engine REST API Client & Container Manager",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "docker.zk",
+      "path": "std_modules/cl-docker",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "docker.zk",
+          "checksum": "sha256:6f96aac56cd46896884e97ccedc462289cabd2d8710cd4dc8c5bc301ff6ce23c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-duration": {
+      "name": "cl-duration",
+      "description": "Duration Parsing and Formatting Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "duration.zk",
+      "path": "std_modules/cl-duration",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "duration.zk",
+          "checksum": "sha256:3ed97e3bc2ddba22ec2ae49836077857c8500b3e842ad00875eea2891c34afcd",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-duration-format": {
+      "name": "cl-duration-format",
+      "description": "Human-readable Duration Formatting Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "duration_format.zk",
+      "path": "std_modules/cl-duration-format",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "duration_format.zk",
+          "checksum": "sha256:a67577793411e3f3b7be5c3b5b1e1ff05db617081d4fc88ef5c409f097610d14",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-elasticsearch": {
+      "name": "cl-elasticsearch",
+      "description": "Elasticsearch & OpenSearch Full-Text Search Connector",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "elasticsearch.zk",
+      "path": "std_modules/cl-elasticsearch",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "elasticsearch.zk",
+          "checksum": "sha256:c574059df02c05726abf49f898407555096fd9ab6966e448bac4c644b0da2fea",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-email": {
+      "name": "cl-email",
+      "description": "Email Structure Validator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "email.zk",
+      "path": "std_modules/cl-email",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "email.zk",
+          "checksum": "sha256:6585d5382f8da97fc9d9caf56dd7fa899fea82186a9be8628aac2c3b16e74cf6",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-env": {
+      "name": "cl-env",
+      "description": "OS Environment Configuration Parser Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "env.zk",
+      "path": "std_modules/cl-env",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "env.zk",
+          "checksum": "sha256:d35c86161249d3f1771712d5cc549c93c165e5a27164b6fd0b1aed69838e0cb2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-etcd": {
+      "name": "cl-etcd",
+      "description": "etcd v3 Distributed Key-Value Store Client",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "etcd.zk",
+      "path": "std_modules/cl-etcd",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "etcd.zk",
+          "checksum": "sha256:458c32fbe4416ea9e058e0b410da0efce86592fe94412dbe0ee43b1fe5eefafa",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fastapi": {
+      "name": "cl-fastapi",
+      "description": "Modern High-Performance Web Routing & API Dispatcher (Python FastAPI parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "fastapi.zk",
+      "path": "std_modules/cl-fastapi",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fastapi.zk",
+          "checksum": "sha256:2cce6d9c7798dc2f5e618efc2545a89d6a0fcdebd393a6007b579b805ac5c2e5",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fibonacci": {
+      "name": "cl-fibonacci",
+      "description": "Fibonacci Sequence Generator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "fibonacci.zk",
+      "path": "std_modules/cl-fibonacci",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fibonacci.zk",
+          "checksum": "sha256:348dbf8e60ab0e4c8c2dc1bc751c5b4b4ead843a4157c6c033991fd293ea0add",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fraction": {
+      "name": "cl-fraction",
+      "description": "Fraction and Rational Math Utilities",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "fraction.zk",
+      "path": "std_modules/cl-fraction",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fraction.zk",
+          "checksum": "sha256:2908382aca4eec5bf9daf537fb39ebc702c32282cb88fbb2b8ea3ca15762a7af",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fraction-format": {
+      "name": "cl-fraction-format",
+      "description": "Float to Rational Fraction String Formatter",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "fraction_format.zk",
+      "path": "std_modules/cl-fraction-format",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fraction_format.zk",
+          "checksum": "sha256:828b37627c7886449251aeec84ae6c2a41ed2002f7255f5284e223b1f34135de",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fs": {
+      "name": "cl-fs",
+      "description": "File system operations for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "fs.zk",
+      "path": "std_modules/cl-fs",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fs.zk",
+          "checksum": "sha256:9bceb0335aa4eaab2cae7a3be6e98c6ca070e0c6066bd705c793ddf3c7c6004b",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ftp": {
+      "name": "cl-ftp",
+      "description": "FTP and FTPS Client Protocol Wrapper",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ftp.zk",
+      "path": "std_modules/cl-ftp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ftp.zk",
+          "checksum": "sha256:c90bf87af9478810a1e580e638daed9061a5b1b4ff6350c911194fd27a429a92",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-gcd": {
+      "name": "cl-gcd",
+      "description": "GCD and LCM Math Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "gcd.zk",
+      "path": "std_modules/cl-gcd",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "gcd.zk",
+          "checksum": "sha256:a1ce60b641e9435a63cb1c4f112efc8d978b98f437ad910dc9cca26627ed92a1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-gcd-multi": {
+      "name": "cl-gcd-multi",
+      "description": "Multi-argument GCD and LCM Math Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "gcd_multi.zk",
+      "path": "std_modules/cl-gcd-multi",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "gcd_multi.zk",
+          "checksum": "sha256:ce11b819358a362fd87d44f46b63fe0512700ab0d58078936c77fd6d33a33635",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-glob": {
+      "name": "cl-glob",
+      "description": "Wildcard Pattern String Glob Matcher (* and ?)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "glob_match.zk",
+      "path": "std_modules/py/cl-glob",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "glob_match.zk",
+          "checksum": "sha256:730bab556dc6f50ee1da4d5b7b3decf4640524c301aa72ca0a593990cfa4ce73",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-graph": {
+      "name": "cl-graph",
+      "description": "Graph data structure with BFS/DFS/shortest path",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "graph.zk",
+      "path": "std_modules/cl-graph",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "graph.zk",
+          "checksum": "sha256:f33c4cc60f90878d626ff660b52f8dd0e3edd2e790b559adbb88081e23b78044",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-graphql": {
+      "name": "cl-graphql",
+      "description": "GraphQL Query Parser & Schema Execution Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "graphql.zk",
+      "path": "std_modules/cl-graphql",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "graphql.zk",
+          "checksum": "sha256:5e2d88fb4f7adc125c0d6f23b67da13588eabef45182cd6bf37e17ede4075432",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-grpc": {
+      "name": "cl-grpc",
+      "description": "gRPC / Protobuf High-Speed Microservice RPC Connector",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "grpc.zk",
+      "path": "std_modules/cl-grpc",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "grpc.zk",
+          "checksum": "sha256:6547e7891d951c98a807563ded25f930b71f09269f9d9229a2d1a661c1be0a25",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-gui": {
+      "name": "cl-gui",
+      "description": "GUI toolkit (FLTK-backed)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "gui.zk",
+      "path": "std_modules/cl-gui",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "gui.zk",
+          "checksum": "sha256:51f63037b8f8627f44607ed261b2b3fe6be5fdbe5656aa6ac58a2f4e57a415a1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hamming": {
+      "name": "cl-hamming",
+      "description": "Hamming Distance Calculation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "hamming.zk",
+      "path": "std_modules/cl-hamming",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hamming.zk",
+          "checksum": "sha256:ea66a0bfebf1d0263bd04b591443e9c239ae878a66396fe10c3356f73f35897c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hash": {
+      "name": "cl-hash",
+      "description": "FNV-1a Fast Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "hash.zk",
+      "path": "std_modules/cl-hash",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hash.zk",
+          "checksum": "sha256:c2962291f07e327c19ef8ffc03ae4f84abc3a6c1e1ce7381c6297d1bb7be2f26",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-heap": {
+      "name": "cl-heap",
+      "description": "Binary Min-Heap Priority Queue (Rust BinaryHeap parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "heap.zk",
+      "path": "std_modules/rs/cl-heap",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "heap.zk",
+          "checksum": "sha256:90cb5f2e49ce972a7f58bd2314798faa128519c10402819a4688f442152d3f9e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hex": {
+      "name": "cl-hex",
+      "description": "Hexadecimal Encoder and Decoder Table Engine (Rust hex parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "hex_codec.zk",
+      "path": "std_modules/rs/cl-hex",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hex_codec.zk",
+          "checksum": "sha256:0008072b094ad5509fa82b77f02a72be61b98be230b05f039f94e4fb237dda04",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hex-colors": {
+      "name": "cl-hex-colors",
+      "description": "Hex Color Conversion Utility",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "hex_colors.zk",
+      "path": "std_modules/cl-hex-colors",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hex_colors.zk",
+          "checksum": "sha256:44dbb3c6ccc66df5c5685e4943d7f7c4f3afbbd2fb64e69cf5e62b37a59b7ad5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hex-dump": {
+      "name": "cl-hex-dump",
+      "description": "Hexadecimal Dump Formatter Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "hex_dump.zk",
+      "path": "std_modules/cl-hex-dump",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hex_dump.zk",
+          "checksum": "sha256:dfa4fd6459ad71d9385d7ba851becbdb9768cd79c8645b7de7a0ccb7bc3df9ea",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-hmac": {
+      "name": "cl-hmac",
+      "description": "HMAC-SHA256 Authentication Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "hmac.zk",
+      "path": "std_modules/cl-hmac",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "hmac.zk",
+          "checksum": "sha256:86604d94bafd303541ede751253616e0bec06f56349392a89bc423f219ac29d2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-html": {
+      "name": "cl-html",
+      "description": "HTML templating engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "html.zk",
+      "path": "std_modules/cl-html",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "html.zk",
+          "checksum": "sha256:4e77e21d97fa5b760768be3471d003883b76fc1b9e98d1dcacbc9c89e147c9c5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-http": {
+      "name": "cl-http",
+      "description": "HTTP client and server for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "http.zk",
+      "path": "std_modules/cl-http",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "http.zk",
+          "checksum": "sha256:c8e86d7a5b110daaf351fc060ce1bcc718b58f969b713a2c80c74fe5dbfec9d2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-image": {
+      "name": "cl-image",
+      "description": "Simple Image Conversion Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "image.zk",
+      "path": "std_modules/cl-image",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "image.zk",
+          "checksum": "sha256:271c3e27d77fe42a26c31d1621be7472a1d6a1d537a3e74a558488dc2abe4aa5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ip": {
+      "name": "cl-ip",
+      "description": "IP Address Validation and Subnet Matcher",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ip.zk",
+      "path": "std_modules/cl-ip",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ip.zk",
+          "checksum": "sha256:1e6fe4d259a1257f4f71855fbb8a99f59fbad13f14f2d9f0cceaf666f188a466",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-isbn": {
+      "name": "cl-isbn",
+      "description": "ISBN Checksum Validation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "isbn.zk",
+      "path": "std_modules/cl-isbn",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "isbn.zk",
+          "checksum": "sha256:43442e88e3644cb3a2275da8157fb92d6915e608acfca85e89afe6911b73705d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-isbn-generate": {
+      "name": "cl-isbn-generate",
+      "description": "ISBN Check Digit Generator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "isbn_generate.zk",
+      "path": "std_modules/cl-isbn-generate",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "isbn_generate.zk",
+          "checksum": "sha256:c1e53558987ebd2d9597187e65a97ac65f1224ddf92f54ac3924e3bcc05ea6e1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-jaccard": {
+      "name": "cl-jaccard",
+      "description": "Jaccard Similarity Coefficient Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "jaccard.zk",
+      "path": "std_modules/cl-jaccard",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "jaccard.zk",
+          "checksum": "sha256:9663c672790019feed34ae5acb35bb6071d1f9ad177b2e89c6becdbd8e6bb96f",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-json": {
+      "name": "cl-json",
+      "description": "JSON parsing and generation for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "json.zk",
+      "path": "std_modules/cl-json",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "json.zk",
+          "checksum": "sha256:af5937a3bb989641902c6829901e03d4843d9b9dd2ebaec111d1460096de17c9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-json2": {
+      "name": "cl-json2",
+      "description": "JSON Pretty Printer Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "json2.zk",
+      "path": "std_modules/cl-json2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "json2.zk",
+          "checksum": "sha256:ed64af39f3eb547df450d109bb8b6b5556b3a5cd52e3c3fc8b81da478c190468",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-jwt": {
+      "name": "cl-jwt",
+      "description": "JSON Web Token (JWT) Sign, Verify & Base64URL Engine (Python PyJWT parity, 100% Pure Cluster)",
+      "latest": "0.2.0",
+      "license": "MIT",
+      "main": "jwt.zk",
+      "path": "std_modules/cl-jwt",
+      "versions": {
+        "0.2.0": {
+          "version": "0.2.0",
+          "main": "jwt.zk",
+          "checksum": "sha256:1fb68f8db377cc74d0b11d021d110283a69078cb94dc09a6762a96e696474af7",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-kubernetes": {
+      "name": "cl-kubernetes",
+      "description": "Kubernetes (K8s) API Client & Pod Orchestrator",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "kubernetes.zk",
+      "path": "std_modules/cl-kubernetes",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "kubernetes.zk",
+          "checksum": "sha256:f50337103d76eef3ef2913f98fc0e1a2ac01bef54fcd243645c06064736c25c4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-leven-search": {
+      "name": "cl-leven-search",
+      "description": "Levenshtein Fuzzy Search Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "leven_search.zk",
+      "path": "std_modules/cl-leven-search",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "leven_search.zk",
+          "checksum": "sha256:0eb2909467abe4432e05b9676d40f5891941ecd56fc44ffa0faed58c913aeffc",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-levenshtein": {
+      "name": "cl-levenshtein",
+      "description": "Levenshtein Edit Distance String Metric (Python Levenshtein parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "levenshtein.zk",
+      "path": "std_modules/py/cl-levenshtein",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "levenshtein.zk",
+          "checksum": "sha256:d433356eb8cfc3ca7aa5707c62c8f72927610bebb4a411006500dafa76724e01",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-linq": {
+      "name": "cl-linq",
+      "description": "Fluent collection query pipeline and operators (C# LINQ parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "linq.zk",
+      "path": "std_modules/cl-linq",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "linq.zk",
+          "checksum": "sha256:b20c625e4310d52e43d0e24953f044faade789b0971aa8c03618a924f2092c6d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-llm": {
+      "name": "cl-llm",
+      "description": "Unified local & cloud LLM API (Ollama, OpenAI, Gemini, Anthropic)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "llm.zk",
+      "path": "std_modules/cl-llm",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "llm.zk",
+          "checksum": "sha256:fee74f3945c9271ccadaa47b24ab3e3aa443504e6115c5b5d6080e6c57be11a5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-log": {
+      "name": "cl-log",
+      "description": "Structured logging framework with levels and file output",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "log.zk",
+      "path": "std_modules/cl-log",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "log.zk",
+          "checksum": "sha256:393b1915628d08618a96f9608470ec4ec5d1cac4e9aeddbf6f0c03ff1db8f9b8",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lucene": {
+      "name": "cl-lucene",
+      "description": "Full-text search engine and inverted indexing (Java Lucene parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lucene.zk",
+      "path": "std_modules/cl-lucene",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lucene.zk",
+          "checksum": "sha256:57862c1e4665fb1ee00a6d764df593505749429939623343b364b67d99f890f1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-luhn": {
+      "name": "cl-luhn",
+      "description": "Luhn Algorithm Validation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "luhn.zk",
+      "path": "std_modules/cl-luhn",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "luhn.zk",
+          "checksum": "sha256:ea1e2de9dedfd908248ad2afa6e5b6d895bb7a2b3c84190cff56c6a72afcaf8b",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-luhn-generate": {
+      "name": "cl-luhn-generate",
+      "description": "Luhn Algorithm Check Digit Generator",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "luhn_generate.zk",
+      "path": "std_modules/cl-luhn-generate",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "luhn_generate.zk",
+          "checksum": "sha256:d1c883a61a4091965a9a3abb7970f7fbd33054d782bc9fe46515a92bbd2f95b8",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-luhn-mod30": {
+      "name": "cl-luhn-mod30",
+      "description": "Luhn Modulo 30 Algorithm Helper",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "luhn_mod30.zk",
+      "path": "std_modules/cl-luhn-mod30",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "luhn_mod30.zk",
+          "checksum": "sha256:fc368432a2e014d27b09c497cca24f7f330eeb43662242b090bfe7ea06b5fd42",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-math": {
+      "name": "cl-math",
+      "description": "Math functions (sin, cos, tan, log, ceil, floor, round)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "math.zk",
+      "path": "std_modules/cl-math",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "math.zk",
+          "checksum": "sha256:ebb9c50b34fb52653d92ea0c40e2fc603594339f719e6c1b899ae81273523626",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-math2": {
+      "name": "cl-math2",
+      "description": "Additional Trigonometric and Advanced Math Utilities",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "math2.zk",
+      "path": "std_modules/cl-math2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "math2.zk",
+          "checksum": "sha256:39ad588cee2f4f647db1823645d22349c47077e2ff60f074650ccbdbc9686f7f",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-md5": {
+      "name": "cl-md5",
+      "description": "MD5 Hashing Utility",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "md5.zk",
+      "path": "std_modules/cl-md5",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "md5.zk",
+          "checksum": "sha256:8fe0add74552d073abe3ad4f8c7002d0854629dc5da7adff0d2a21b0b588872c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-memcached": {
+      "name": "cl-memcached",
+      "description": "Memcached Key-Value Memory Object Store Client",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "memcached.zk",
+      "path": "std_modules/cl-memcached",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "memcached.zk",
+          "checksum": "sha256:e47ebb52a79645fdda346447c3763bb5c643220a2eee7b5c0e1a562f2d631019",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-metrics": {
+      "name": "cl-metrics",
+      "description": "Prometheus Metrics Exporter Engine (Counter, Gauge, Histogram)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "metrics.zk",
+      "path": "std_modules/cl-metrics",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "metrics.zk",
+          "checksum": "sha256:288e65e3f07df42c1c8b4305c560e9b0f49d6af036996ee1387baab9b5ff14a0",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-mime": {
+      "name": "cl-mime",
+      "description": "MIME Type Detector and File Extension Registry (Python mimetypes parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "mime.zk",
+      "path": "std_modules/py/cl-mime",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "mime.zk",
+          "checksum": "sha256:3d4f03b1993276142978795ddf1a49f2a5b19f86a58b66e54de5d4f2c1296e16",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-mongo": {
+      "name": "cl-mongo",
+      "description": "MongoDB Wire Protocol & Document Store Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "mongo.zk",
+      "path": "std_modules/cl-mongo",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "mongo.zk",
+          "checksum": "sha256:5b386596f3a91aa6fed9ed12b88a608add82fcb4d1261b95cb6260e4fdd8e82b",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-morse": {
+      "name": "cl-morse",
+      "description": "Morse Code Translator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "morse.zk",
+      "path": "std_modules/cl-morse",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "morse.zk",
+          "checksum": "sha256:39f3edb5f51160ed10a6e4fa4d17d1937bbb8867591b5e50f132012e691ac862",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-morse-code": {
+      "name": "cl-morse-code",
+      "description": "Advanced Morse Code Translation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "morse_code.zk",
+      "path": "std_modules/cl-morse-code",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "morse_code.zk",
+          "checksum": "sha256:114e31359ba95edaf984e686fa92f7b729bf618bc7cc15ccf62896cffe997b94",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-mqtt": {
+      "name": "cl-mqtt",
+      "description": "MQTT IoT Protocol High-Speed Client",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "mqtt.zk",
+      "path": "std_modules/cl-mqtt",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "mqtt.zk",
+          "checksum": "sha256:8e8956df336fb078a4c1a4b5c53959038880992fe2c7235278747e59a49b69be",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-murmur": {
+      "name": "cl-murmur",
+      "description": "MurmurHash3 Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "murmur.zk",
+      "path": "std_modules/cl-murmur",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "murmur.zk",
+          "checksum": "sha256:c372a401428f80ca0a4ed3063cd4f9e8e9a0bd2af4581982f7a904a7dfa8f877",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-nats": {
+      "name": "cl-nats",
+      "description": "NATS.io High-Performance Pub/Sub Microservice Messaging Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "nats.zk",
+      "path": "std_modules/cl-nats",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "nats.zk",
+          "checksum": "sha256:16474be302b0d8dcc670a77572ae439be39853ab1064d93ee14b65d94732b2e8",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-numpy": {
+      "name": "cl-numpy",
+      "description": "N-Dimensional Array & Numerical Computing Engine (Python NumPy parity, 100% Pure Cluster)",
+      "latest": "0.2.0",
+      "license": "MIT",
+      "main": "numpy.zk",
+      "path": "std_modules/cl-numpy",
+      "versions": {
+        "0.2.0": {
+          "version": "0.2.0",
+          "main": "numpy.zk",
+          "checksum": "sha256:2e1df77feddef20cfd6715c744ef4181b4b4c61b0e31355a6616ba9ac4f04ed0",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        },
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "numpy.zk",
+          "checksum": "sha256:f05201d08c5e1e6345d43812d0a3c8ca52fb3c37042545ccd6c55c3af4dc28c1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-oauth": {
+      "name": "cl-oauth",
+      "description": "OAuth2 / OpenID Connect (OIDC) Authentication Flow Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "oauth.zk",
+      "path": "std_modules/cl-oauth",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "oauth.zk",
+          "checksum": "sha256:c99bddc67ea33ed18c740590b748e4b6c39699252a0818f62fbf5ba3b35702ef",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-openapi": {
+      "name": "cl-openapi",
+      "description": "OpenAPI/Swagger Specification Document Generator",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "openapi.zk",
+      "path": "std_modules/cl-openapi",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "openapi.zk",
+          "checksum": "sha256:d254475098f83de7b228faa8ddf0738b0fe43e30dfa2e3561e732b69042436c4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-os": {
+      "name": "cl-os",
+      "description": "OS and system utilities for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "os.zk",
+      "path": "std_modules/cl-os",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "os.zk",
+          "checksum": "sha256:f6d04812c7fb55b67316e4ed5c656f77fe3ce68cf4d5fec0f0b0647bc55ec8eb",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-pathlib": {
+      "name": "cl-pathlib",
+      "description": "Path manipulation (join, dirname, basename, stem, suffix, absolute, parent)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "pathlib.zk",
+      "path": "std_modules/cl-pathlib",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "pathlib.zk",
+          "checksum": "sha256:44767c7374c35256c2f3c30c94dd738b1d085c1a368ae0ded15fd3b062519a25",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-percent-encode": {
+      "name": "cl-percent-encode",
+      "description": "URL Percent Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "percent_encode.zk",
+      "path": "std_modules/cl-percent-encode",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "percent_encode.zk",
+          "checksum": "sha256:f8b28f10e6415ced90ceb5636c7a16d95eb1995a564922c1e452876a2106bc81",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-phone": {
+      "name": "cl-phone",
+      "description": "E.164 Phone Number Validator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "phone.zk",
+      "path": "std_modules/cl-phone",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "phone.zk",
+          "checksum": "sha256:f12a3d2730c79257f4df1c8705e1bc258f7eaa1226f6d09b97cb41daa85c2266",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-phonetic": {
+      "name": "cl-phonetic",
+      "description": "Soundex Phonetic Classification Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "phonetic.zk",
+      "path": "std_modules/cl-phonetic",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "phonetic.zk",
+          "checksum": "sha256:03911ac300c18f3b8645892681ab439974873509991567267837fc7dfd1e8560",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-playfair": {
+      "name": "cl-playfair",
+      "description": "Playfair Cipher Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "playfair.zk",
+      "path": "std_modules/cl-playfair",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "playfair.zk",
+          "checksum": "sha256:c789f5d46aba9afda9098fcb7474fd4790311695d9010912563d8981c855c660",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-polybius": {
+      "name": "cl-polybius",
+      "description": "Polybius Square Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "polybius.zk",
+      "path": "std_modules/cl-polybius",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "polybius.zk",
+          "checksum": "sha256:3b2ace942479f7c0ece2f646780ecd7f9315c0eeb2b73e1d4e434a980fb53847",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-postgres": {
+      "name": "cl-postgres",
+      "description": "PostgreSQL Wire Protocol 3.0 Client & Packet Engine (Rust tokio-postgres parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "postgres.zk",
+      "path": "std_modules/cl-postgres",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "postgres.zk",
+          "checksum": "sha256:73f4353ac0638abcf4668c744799fbd147dfc4f92c641398beb91c52d75ea168",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-prime": {
+      "name": "cl-prime",
+      "description": "Primality Testing and Prime Generation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "prime.zk",
+      "path": "std_modules/cl-prime",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "prime.zk",
+          "checksum": "sha256:00dccc43a6f67cae7bb460e783af09698a959958ded0401eecfbdec9ae0bf5ff",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-priority-queue": {
+      "name": "cl-priority-queue",
+      "description": "Priority Queue Container Model",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "priority_queue.zk",
+      "path": "std_modules/cl-priority-queue",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "priority_queue.zk",
+          "checksum": "sha256:29108b5dbbed603d7ebf68a5583e91550be0389107602b063946005af5efd574",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-progress": {
+      "name": "cl-progress",
+      "description": "Terminal progress bars and spinners",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "progress.zk",
+      "path": "std_modules/cl-progress",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "progress.zk",
+          "checksum": "sha256:85009fc6ef483a644a8ebc0d0d6a9ac676b375c8d04fb791556685179b3c08f4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-prompt": {
+      "name": "cl-prompt",
+      "description": "AI Prompt Templating & Safety Guardrails Module",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "prompt.zk",
+      "path": "std_modules/cl-prompt",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "prompt.zk",
+          "checksum": "sha256:e6703b5324f452e84da864b779a362fe6d2f44c136d8491a230b2c223b870be5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-pydantic": {
+      "name": "cl-pydantic",
+      "description": "Data schema validation and type parsing engine (Python Pydantic parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "pydantic.zk",
+      "path": "std_modules/cl-pydantic",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "pydantic.zk",
+          "checksum": "sha256:f2964178cefcd59fc35bbe6195a20618410699bb06a4e5d8288544ff6f3e6f6d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-queue": {
+      "name": "cl-queue",
+      "description": "FIFO Queue Container Model",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "queue.zk",
+      "path": "std_modules/cl-queue",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "queue.zk",
+          "checksum": "sha256:9c926211d162b157ebedc303290a7aba3bb3a9abdc1db83323b0f050197cefb0",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rabbitmq": {
+      "name": "cl-rabbitmq",
+      "description": "AMQP 0-9-1 RabbitMQ High-Speed Message Broker Connector",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rabbitmq.zk",
+      "path": "std_modules/cl-rabbitmq",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rabbitmq.zk",
+          "checksum": "sha256:ca522cbddbcd0c1e845889e4836d7bbc467b75a800c12e13352e9a7e7698e722",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-raft": {
+      "name": "cl-raft",
+      "description": "Raft Distributed Consensus Engine (Go etcd/raft parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "raft.zk",
+      "path": "std_modules/cl-raft",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "raft.zk",
+          "checksum": "sha256:e62436987606d4e4af3e5bc96d040edc12292f5346679e693b6c12ef81380073",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rag": {
+      "name": "cl-rag",
+      "description": "Retrieval-Augmented Generation (RAG) Document Chunker & Context Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rag.zk",
+      "path": "std_modules/cl-rag",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rag.zk",
+          "checksum": "sha256:48d2d74fa7177054859f4f7652ec2a8db0aaaaf934925080e49a9a95a38614d8",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rail-fence": {
+      "name": "cl-rail-fence",
+      "description": "Rail Fence Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rail_fence.zk",
+      "path": "std_modules/cl-rail-fence",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rail_fence.zk",
+          "checksum": "sha256:92719b048e34094d92303d07e132b96bbef59a753ce6ebb8a7c53e2a725380bc",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-random": {
+      "name": "cl-random",
+      "description": "Random number utilities (range, shuffle, weighted)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "random.zk",
+      "path": "std_modules/cl-random",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "random.zk",
+          "checksum": "sha256:afe7d7a4809a18786741f7583a7b2745d564e111584131cf79f572ce04d23f8a",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-random-string": {
+      "name": "cl-random-string",
+      "description": "Random String Generation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "random_string.zk",
+      "path": "std_modules/cl-random-string",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "random_string.zk",
+          "checksum": "sha256:8226c26d912e2c0aca4a784e809a6811263768edb255136439a58f255fd3f98c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rate-limit": {
+      "name": "cl-rate-limit",
+      "description": "Token Bucket & Sliding Window Rate Limiter Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rate_limit.zk",
+      "path": "std_modules/cl-rate-limit",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rate_limit.zk",
+          "checksum": "sha256:5526f9e69cc50f1ccc5cd460711f023e01bce5fc50cd8dbc137aae6a9f462628",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rc4": {
+      "name": "cl-rc4",
+      "description": "RC4 Stream Cipher Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rc4.zk",
+      "path": "std_modules/cl-rc4",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rc4.zk",
+          "checksum": "sha256:13162713592be8d741d01ad38d0c27c38a0b97ad37faa35738f32dcaafb9096d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-redis": {
+      "name": "cl-redis",
+      "description": "Redis Wire Protocol (RESP) & In-Memory Storage Engine (Rust redis-rs & Python redis-py parity)",
+      "latest": "0.2.0",
+      "license": "MIT",
+      "main": "redis.zk",
+      "path": "std_modules/cl-redis",
+      "versions": {
+        "0.2.0": {
+          "version": "0.2.0",
+          "main": "redis.zk",
+          "checksum": "sha256:33a9f2fcf89b6eada9816f0001bfba0f975f6900728f9b5b5b6d8263e624fd30",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-regex": {
+      "name": "cl-regex",
+      "description": "Regular expression utilities for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "regex.zk",
+      "path": "std_modules/cl-regex",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "regex.zk",
+          "checksum": "sha256:8415e30313b072333c31da07d0a50a4e32b720733a2c4934db224df683235874",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-requests": {
+      "name": "cl-requests",
+      "description": "Ergonomic HTTP client and request formatting engine (Python requests parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "requests.zk",
+      "path": "std_modules/cl-requests",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "requests.zk",
+          "checksum": "sha256:be90c3d62007d6d8d76e71f4f39fba14b86c6f3d0d824f5459d43e245f79b9ce",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-retry": {
+      "name": "cl-retry",
+      "description": "Operations Retry and Backoff Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "retry.zk",
+      "path": "std_modules/cl-retry",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "retry.zk",
+          "checksum": "sha256:44bd5a1fb87cfce9b6b9b4d1a8185f149bafbd784b7c70b0d3efe0fbb6dea99b",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rle": {
+      "name": "cl-rle",
+      "description": "Run-Length Encoding (RLE) Compression Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rle.zk",
+      "path": "std_modules/cl-rle",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rle.zk",
+          "checksum": "sha256:a7f06da112cf5632497b568dbd4c315a297e5b4d04ce3101cf4b297cb0347028",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-roman": {
+      "name": "cl-roman",
+      "description": "Roman Numeral Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "roman.zk",
+      "path": "std_modules/cl-roman",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "roman.zk",
+          "checksum": "sha256:a72fddc0817d5a702e5f132a8107c6213756aae53ddeb7b50bf4508e41283621",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rot13": {
+      "name": "cl-rot13",
+      "description": "ROT13 Caesar Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rot13.zk",
+      "path": "std_modules/cl-rot13",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rot13.zk",
+          "checksum": "sha256:d4b06e47b222becd1cc1570d3b4b9f56504b047feaa0b5af89b26a0c80aecd78",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rot18": {
+      "name": "cl-rot18",
+      "description": "ROT18 Cipher Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rot18.zk",
+      "path": "std_modules/cl-rot18",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rot18.zk",
+          "checksum": "sha256:a075708e26379c0e16cbcd17cec1444fd63c0bf35043590077dcda0b7f31bca3",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rot47": {
+      "name": "cl-rot47",
+      "description": "ROT47 Caesar Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rot47.zk",
+      "path": "std_modules/cl-rot47",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rot47.zk",
+          "checksum": "sha256:e5cd0f489b70cd5f4ffbbcfd2cb6c27e18355c1d77952613d86d71ab61de4457",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rot5": {
+      "name": "cl-rot5",
+      "description": "ROT5 Numeric Substitution Cipher Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "rot5.zk",
+      "path": "std_modules/cl-rot5",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rot5.zk",
+          "checksum": "sha256:997ed8cb73897baa29f9a4e1edd1855e281f28c2db2a470862d809921503c005",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-router": {
+      "name": "cl-router",
+      "description": "High-Speed URL Router utilizing Radix-Trie or Map matching",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "router.zk",
+      "path": "std_modules/cl-router",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "router.zk",
+          "checksum": "sha256:e23f45d6dc3eda4b700b0d06c1055f32ca640281de8bfcaba367d44be5f5fd65",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-runes": {
+      "name": "cl-runes",
+      "description": "UTF-8 Rune Count and Validation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "runes.zk",
+      "path": "std_modules/cl-runes",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "runes.zk",
+          "checksum": "sha256:2157465fc628044d7995d0898e5805ac054ee8692c007b4c17b1a9dff66d8db7",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-runes-case": {
+      "name": "cl-runes-case",
+      "description": "UTF-8 Runes Unicode Casing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "runes_case.zk",
+      "path": "std_modules/cl-runes-case",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "runes_case.zk",
+          "checksum": "sha256:771a1cbe9d73b1b43cf954e65c8d9f3307c446610d5a91d7477a088c8502525e",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sdbm": {
+      "name": "cl-sdbm",
+      "description": "SDBM Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sdbm.zk",
+      "path": "std_modules/cl-sdbm",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sdbm.zk",
+          "checksum": "sha256:75bde6597371a62f56b1fc702c52e4adbbf05aa3e9575add72d5a2d5809db61a",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-semver": {
+      "name": "cl-semver",
+      "description": "Semantic Versioning Parser & Comparator (Python semver parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "semver.zk",
+      "path": "std_modules/py/cl-semver",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "semver.zk",
+          "checksum": "sha256:e6c21b2cf7be1c79c18ed0b13feaff60bd80c4fb63c3ef6d139fbd11fc51862a",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-semver2": {
+      "name": "cl-semver2",
+      "description": "Semantic Version Comparison Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "semver2.zk",
+      "path": "std_modules/cl-semver2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "semver2.zk",
+          "checksum": "sha256:25d002930c2a7ec7b23d9d7ebb113eda35fb2a3e63fb64233df7f0f53dd27cf2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sensors": {
+      "name": "cl-sensors",
+      "description": "Platform sensor access (accelerometer, gyroscope, GPS)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sensors.zk",
+      "path": "std_modules/cl-sensors",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sensors.zk",
+          "checksum": "sha256:cf33c67d7a09b2c183107c2d3697c98dc2aae48a73cac0c6ea65a10e5ccf69cb",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-serial": {
+      "name": "cl-serial",
+      "description": "Serial port communication (termios)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "serial.zk",
+      "path": "std_modules/cl-serial",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "serial.zk",
+          "checksum": "sha256:7d7a74c30eadb54910c374134211381bc28d7ee27e1db9947d7ea7b3464d6c38",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-session": {
+      "name": "cl-session",
+      "description": "Encrypted Cookie & High-Speed Session State Manager",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "session.zk",
+      "path": "std_modules/cl-session",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "session.zk",
+          "checksum": "sha256:2cff236ed6d59eda1af6787e56ee781f27d0c5801f3b280cef9d7c31cab6d2ac",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-set": {
+      "name": "cl-set",
+      "description": "Standard Unique String Hash Set Container Model",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "set.zk",
+      "path": "std_modules/cl-set",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "set.zk",
+          "checksum": "sha256:3b80b66164f173952b51aaea86fb395e3f6939bc519a1a26248ad8391ca0b31e",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sha256": {
+      "name": "cl-sha256",
+      "description": "SHA-256 Hashing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sha256.zk",
+      "path": "std_modules/cl-sha256",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sha256.zk",
+          "checksum": "sha256:770d1c4e688381501ebf8029ade24feeb63f852cacc5a31deef5e4c3ff2d73c9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-shannon-entropy": {
+      "name": "cl-shannon-entropy",
+      "description": "Shannon Entropy Calculation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "shannon_entropy.zk",
+      "path": "std_modules/cl-shannon-entropy",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "shannon_entropy.zk",
+          "checksum": "sha256:6afc66068ceb227f1cc535697f5c64a328a079faa63605e8c4614b3a8a329681",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-shutil": {
+      "name": "cl-shutil",
+      "description": "File operations: copy, move, rename, mkdir, rmtree, which",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "shutil.zk",
+      "path": "std_modules/cl-shutil",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "shutil.zk",
+          "checksum": "sha256:7d625b79aca28360490a91609cf73f9cb28c8a39801cbd43f3778d0eb71c233e",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-signal": {
+      "name": "cl-signal",
+      "description": "OS Signal Handling Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "signal.zk",
+      "path": "std_modules/cl-signal",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "signal.zk",
+          "checksum": "sha256:b5cd35fc93b49ac6c44db04f9d8f50307f35b6f2dd73d625e273dee46de5e9f2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-slug": {
+      "name": "cl-slug",
+      "description": "URL Slug Generator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "slug.zk",
+      "path": "std_modules/cl-slug",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "slug.zk",
+          "checksum": "sha256:dfce9a692da6172e8c8b2217114235931a1141405783b1b3aed33ea79f3b4aa9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-smtp": {
+      "name": "cl-smtp",
+      "description": "SMTP email sending via TCP socket",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "smtp.zk",
+      "path": "std_modules/cl-smtp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "smtp.zk",
+          "checksum": "sha256:17907da52d785b3d9410dd3e06fb2e021f67a1bc2f8d26de2b2daa9de454457d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-socket": {
+      "name": "cl-socket",
+      "description": "Raw TCP/UDP socket communication",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "socket.zk",
+      "path": "std_modules/cl-socket",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "socket.zk",
+          "checksum": "sha256:15338dd1fb9bdb714499d5787966c60cf7e28afe6dff5693a06cb6a1410e5849",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sort-advanced": {
+      "name": "cl-sort-advanced",
+      "description": "Advanced Sort Algorithms Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sort_advanced.zk",
+      "path": "std_modules/cl-sort-advanced",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sort_advanced.zk",
+          "checksum": "sha256:b39a46a8b13677eaf3e7b0dece2dfbeac451ab2a456cc0a4a6c27f818b8cd0a3",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sort2": {
+      "name": "cl-sort2",
+      "description": "Float and Integer Vectors Sorting Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sort2.zk",
+      "path": "std_modules/cl-sort2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sort2.zk",
+          "checksum": "sha256:84c9191c558256747b3d162128b2c64842da0d0b69642c9537f641a024849b18",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sqlite-vector": {
+      "name": "cl-sqlite-vector",
+      "description": "Embedded SQLite Vector Extension for Local Nearest-Neighbor Search",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sqlite_vector.zk",
+      "path": "std_modules/cl-sqlite-vector",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sqlite_vector.zk",
+          "checksum": "sha256:aa45f7f405d5ead7eafd1efd2dee8cab8312da35be6a2ef75e0fedfaccd7e96d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sse": {
+      "name": "cl-sse",
+      "description": "Server-Sent Events (SSE) Real-Time HTTP Streaming Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sse.zk",
+      "path": "std_modules/cl-sse",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sse.zk",
+          "checksum": "sha256:6004281639663492fc43e1ee817ef80605acf8e8b582c7b8081b94f1fd004c30",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ssh": {
+      "name": "cl-ssh",
+      "description": "SSH2 and SFTP Client Protocol Wrapper",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "ssh.zk",
+      "path": "std_modules/cl-ssh",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ssh.zk",
+          "checksum": "sha256:68b58993dfe66face5902f7461de020ae39cfb07684707be73e902d72ec3dddc",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stack": {
+      "name": "cl-stack",
+      "description": "LIFO Stack Container Model",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "stack.zk",
+      "path": "std_modules/cl-stack",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stack.zk",
+          "checksum": "sha256:08bd8309406bfd290d9b1d73b76ed7499c92f21ab58319a682b97567a67c91ba",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stats": {
+      "name": "cl-stats",
+      "description": "Statistics library (mean, median, stddev, etc.)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "stats.zk",
+      "path": "std_modules/cl-stats",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stats.zk",
+          "checksum": "sha256:c5b1c6fbab47cd7f29e8a51599ff22f65d9dc8b7cb6a70e51ae1ee2548fcb58d",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stats-advanced": {
+      "name": "cl-stats-advanced",
+      "description": "Advanced Vector Statistics calculations Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "stats_advanced.zk",
+      "path": "std_modules/cl-stats-advanced",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stats_advanced.zk",
+          "checksum": "sha256:c228e332e18ac0e6e19c96eb6cb1c97a0a8acc4d8153ae4a534e90473a31913c",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stats-basic": {
+      "name": "cl-stats-basic",
+      "description": "Basic Statistics Operation Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "stats_basic.zk",
+      "path": "std_modules/cl-stats-basic",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stats_basic.zk",
+          "checksum": "sha256:a27df8d0dfd5b1ef8398af97a1312b7660d3f8e35cb694240254ec36b5a975ff",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stats2": {
+      "name": "cl-stats2",
+      "description": "Additional Statistics Utilities",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "stats2.zk",
+      "path": "std_modules/cl-stats2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stats2.zk",
+          "checksum": "sha256:c73bb2e2a74717236db5b1ed6236ab8d4605184e8d4c51e0ef1bb035f561ddc1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-string": {
+      "name": "cl-string",
+      "description": "Additional String Helpers",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "string.zk",
+      "path": "std_modules/cl-string",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "string.zk",
+          "checksum": "sha256:0f984bf5561661a963c80a32055cfe237c5150efded4d1986a490a89a380a884",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-subprocess": {
+      "name": "cl-subprocess",
+      "description": "Run commands with output capture, pipe support, env control",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "subprocess.zk",
+      "path": "std_modules/cl-subprocess",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "subprocess.zk",
+          "checksum": "sha256:793d0d5c7176976a2c040c689ce73479599d695d1fe993d324a2a55019c9f0e4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sync": {
+      "name": "cl-sync",
+      "description": "Concurrency and synchronization primitives (Go sync parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cl_sync.zk",
+      "path": "std_modules/cl-sync",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cl_sync.zk",
+          "checksum": "sha256:3ea610e9404aeff8df66793f18f94385cb02e2ace464d7043d7b9ec5756cf5ea",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sysinfo": {
+      "name": "cl-sysinfo",
+      "description": "System Information Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "sysinfo.zk",
+      "path": "std_modules/cl-sysinfo",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sysinfo.zk",
+          "checksum": "sha256:7341666d73fc974ccdf3b22e228bc582213af954d11f40a50c3141528edd3cfb",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-tar": {
+      "name": "cl-tar",
+      "description": "POSIX ustar Tar Archive Header Parser & Generator (Python tarfile parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "tar.zk",
+      "path": "std_modules/py/cl-tar",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "tar.zk",
+          "checksum": "sha256:5e7c2c747184913ae43fdf8a570c461f7f33f5ff3cd608117ce8c51e2c97a554",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-temp": {
+      "name": "cl-temp",
+      "description": "Temporary Files and Directories Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "temp.zk",
+      "path": "std_modules/cl-temp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "temp.zk",
+          "checksum": "sha256:6f61a375c69ea1b84d34b9a848eaaf1ee349f5d193795ccccc72d5ff48489efa",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-test": {
+      "name": "cl-test",
+      "description": "Testing framework with describe/test/assert",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "test.zk",
+      "path": "std_modules/cl-test",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "test.zk",
+          "checksum": "sha256:816ad4c3375c22520527aa676253511b144b101485625f308c1cee114eaae7d2",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-text": {
+      "name": "cl-text",
+      "description": "String manipulation utilities for cluster-lang",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "text.zk",
+      "path": "std_modules/cl-text",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "text.zk",
+          "checksum": "sha256:6033710eb44afc6ab39d0e5d3f66f730c110a1d4860cd746382a4716b574dc26",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-tokenizers": {
+      "name": "cl-tokenizers",
+      "description": "Fast BPE / WordPiece Tokenizer & Vocabulary Matcher for LLMs",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "tokenizers.zk",
+      "path": "std_modules/cl-tokenizers",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "tokenizers.zk",
+          "checksum": "sha256:fe5c197ccb7bb20537305095a5679843ad416b42a6239ad6df57870e88483df5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-toml": {
+      "name": "cl-toml",
+      "description": "TOML Section and Key-Value Document Model (Rust toml parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "toml_doc.zk",
+      "path": "std_modules/rs/cl-toml",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "toml_doc.zk",
+          "checksum": "sha256:89c7f00912905b89ac61a61e1426df87b0f588836b1385eb61200eb6537f4ecb",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-totp": {
+      "name": "cl-totp",
+      "description": "Time-Based One-Time Password Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "totp.zk",
+      "path": "std_modules/cl-totp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "totp.zk",
+          "checksum": "sha256:ec92ebfd17b344739bb6c3c3aee4b44691f61b6aeeff020da86e923bad7e4774",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-tui": {
+      "name": "cl-tui",
+      "description": "Rich Terminal User Interface (TUI) & Layout Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "tui.zk",
+      "path": "std_modules/cl-tui",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "tui.zk",
+          "checksum": "sha256:10bbabecf04eb937e8f4dd00ffae72e1bce1d8777a35c08404ec31b84659c9fb",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-units": {
+      "name": "cl-units",
+      "description": "Unit conversion (length, temperature, mass, time)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "units.zk",
+      "path": "std_modules/cl-units",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "units.zk",
+          "checksum": "sha256:c33a4e3946e169d5ac0b86949614eeb80b3d5cbafd77bbd5ae6925b827cb3fb7",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-upnp": {
+      "name": "cl-upnp",
+      "description": "UPnP WANIPConnection Port Forwarding Client",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "upnp.zk",
+      "path": "std_modules/cl-upnp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "upnp.zk",
+          "checksum": "sha256:26034c7e16e781a093307bc2901f024580e6844a4b102422244d3b967a216508",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-url": {
+      "name": "cl-url",
+      "description": "RFC 3986 URL Parser and Serializer (Python urllib.parse parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "url.zk",
+      "path": "std_modules/py/cl-url",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "url.zk",
+          "checksum": "sha256:581985b4f717568e774851dafa189dc140dd3c2ac3e4b1c1571cd4eb7dcaed58",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-usb": {
+      "name": "cl-usb",
+      "description": "USB device access (libusb)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "usb.zk",
+      "path": "std_modules/cl-usb",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "usb.zk",
+          "checksum": "sha256:076a61e37ac0596b27415796e42e46c2250a460844120eb30713f244fcf79b75",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-uuid": {
+      "name": "cl-uuid",
+      "description": "UUID v4 generation",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "uuid.zk",
+      "path": "std_modules/cl-uuid",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "uuid.zk",
+          "checksum": "sha256:7be75b4838f56ae3b646304d8256b15192c8362cc93eadf35b8b65ec1f0f43ed",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-uuid4": {
+      "name": "cl-uuid4",
+      "description": "UUID Version 4 Generator Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "uuid4.zk",
+      "path": "std_modules/cl-uuid4",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "uuid4.zk",
+          "checksum": "sha256:b4833f394f880dabc7937a867d798c37ccc0f1e536b6064b683ab3954959abc1",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vault": {
+      "name": "cl-vault",
+      "description": "HashiCorp Vault Secrets Manager REST Client",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vault.zk",
+      "path": "std_modules/cl-vault",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vault.zk",
+          "checksum": "sha256:42fc5589ecca7e88e7445a7ab849504b8dfa51824eaf44dc94564b7e3c0182d3",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vector-db": {
+      "name": "cl-vector-db",
+      "description": "In-memory High-Performance Vector Database & Cosine Similarity Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vector_db.zk",
+      "path": "std_modules/cl-vector-db",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vector_db.zk",
+          "checksum": "sha256:2d6a6745b8babd09df5003da660e9aa4341f5885b6e63d14b469041575bad5d3",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vector-math": {
+      "name": "cl-vector-math",
+      "description": "Float Vectors Arithmetic and Geometry Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vector_math.zk",
+      "path": "std_modules/cl-vector-math",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vector_math.zk",
+          "checksum": "sha256:65bc8f872bc521929114caad19a6c363a401dc32699e7595148eb0bac7153495",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vernam": {
+      "name": "cl-vernam",
+      "description": "Vernam XOR Cipher Encoding and Decoding Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vernam.zk",
+      "path": "std_modules/cl-vernam",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vernam.zk",
+          "checksum": "sha256:e1a3e5286dd8eeebb8044985e01092a4d92001df84615a11cb50a239867aafd9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-version-parse": {
+      "name": "cl-version-parse",
+      "description": "Semantic Version Parsing Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "version_parse.zk",
+      "path": "std_modules/cl-version-parse",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "version_parse.zk",
+          "checksum": "sha256:cc44b355353d747c29e8d7c27fb9337b9754cbe32bb89866e32a8d28a5eb5f92",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-video": {
+      "name": "cl-video",
+      "description": "Video decoding (FFmpeg-backed)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "video.zk",
+      "path": "std_modules/cl-video",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "video.zk",
+          "checksum": "sha256:3c7250bf457971dc10d420589abc5dbe56eb1a293b424344b3ba3659f8fb97c9",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vigenere": {
+      "name": "cl-vigenere",
+      "description": "Vigenere Cipher Encoder and Decoder Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vigenere.zk",
+      "path": "std_modules/cl-vigenere",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vigenere.zk",
+          "checksum": "sha256:8a1768ed57312a7b0c78c960936db7c1453c5ed537b98d4a3c9c34bf189b8b37",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-vigenere-autokey": {
+      "name": "cl-vigenere-autokey",
+      "description": "Vigenere Autokey Cipher Engine",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "vigenere_autokey.zk",
+      "path": "std_modules/cl-vigenere-autokey",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "vigenere_autokey.zk",
+          "checksum": "sha256:7518fb9331943a3f7d7c44d2b0019032bb6b572ed7e9cd9d01cdf7c939e3a6b4",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-websocket": {
+      "name": "cl-websocket",
+      "description": "WebSocket client (wraps C++ socket engine)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "websocket.zk",
+      "path": "std_modules/cl-websocket",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "websocket.zk",
+          "checksum": "sha256:8aaf7cc2c458409aade5a0f4bfa10c19f39b51187980dac2a54811f973712391",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-xml": {
+      "name": "cl-xml",
+      "description": "Minimal XML parser",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "xml.zk",
+      "path": "std_modules/cl-xml",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "xml.zk",
+          "checksum": "sha256:76c37d7254d378e8202863e10b344b88a234953fafcbe40dd1e78e464f5309d5",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-yaml": {
+      "name": "cl-yaml",
+      "description": "Minimal YAML parser",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "yaml.zk",
+      "path": "std_modules/cl-yaml",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "yaml.zk",
+          "checksum": "sha256:316db57595cf5791599e10aef3b3d8a15beaa62717c4b87ca0f698c2c7b72f99",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-zip": {
+      "name": "cl-zip",
+      "description": "GZip file compression (wraps zlib via cpp_inject)",
+      "latest": "0.1.0",
+      "license": "Commercial Control and non copy license",
+      "main": "zip.zk",
+      "path": "std_modules/cl-zip",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "zip.zk",
+          "checksum": "sha256:cdbe4e990e430216c7a29e7a78205fdd679f808cede4c16d94afba78b45c8a52",
+          "yanked": false,
+          "license": "Commercial Control and non copy license",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-backoff": {
+      "name": "cl-backoff",
+      "description": "Exponential Backoff Delay and Bounded Retry Scheduling Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "backoff.zk",
+      "path": "std_modules/py/cl-backoff",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "backoff.zk",
+          "checksum": "sha256:e71588f1ade89ede0c2964f594480d66e513a41d0c8ca95cf9a463030cdb8097",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base64-stream": {
+      "name": "cl-base64-stream",
+      "description": "Chunked Base64 Streaming Triplet Block Encoder (RFC 4648 parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "base64_stream.zk",
+      "path": "std_modules/py/cl-base64-stream",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base64_stream.zk",
+          "checksum": "sha256:ef55a19ca692995083d51e19a2bd40b3d3982e3c731068798f0306535e556f68",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base64-url": {
+      "name": "cl-base64-url",
+      "description": "RFC 4648 URL-Safe Base64 Encoder Without Padding (Python base64 parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "base64_url.zk",
+      "path": "std_modules/py/cl-base64-url",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base64_url.zk",
+          "checksum": "sha256:4b5490412e5d3694c35fef0355573d57334f109e2dbd23f1446eeb8189c5bbfe",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bencode": {
+      "name": "cl-bencode",
+      "description": "BitTorrent Bencoding Parser & Serializer (Python bencode parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bencode.zk",
+      "path": "std_modules/py/cl-bencode",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bencode.zk",
+          "checksum": "sha256:954e6bf1b6e6b1e8542e7e86dcd8d3c297e8f153d138bcb4e45878eb25019548",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bigint-add": {
+      "name": "cl-bigint-add",
+      "description": "Arbitrary Precision String BigInt Addition and Single-Digit Multiplication",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bigint_math.zk",
+      "path": "std_modules/py/cl-bigint-add",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bigint_math.zk",
+          "checksum": "sha256:3af733e9959aecac03929aa04e6c7e95da38162e2771b5aec6b87c4ef7c2948e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-binary-pack": {
+      "name": "cl-binary-pack",
+      "description": "Binary Integer Little/Big Endian Pack and Unpack Primitives (Python struct parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "binary_pack.zk",
+      "path": "std_modules/py/cl-binary-pack",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "binary_pack.zk",
+          "checksum": "sha256:d99e02b1a85631172cf475713a97fdfe067413faef0082f9515511d81a8e79f3",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bitstream": {
+      "name": "cl-bitstream",
+      "description": "Bit-Level Stream Reader and Writer Primitives (Python bitarray parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bitstream.zk",
+      "path": "std_modules/py/cl-bitstream",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bitstream.zk",
+          "checksum": "sha256:8994dc96e5898de6224b6269cc7240e0f80579c0794ea012f3bb8c4449e3993d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-caesar-cipher": {
+      "name": "cl-caesar-cipher",
+      "description": "Classical Caesar Substitution Cipher and Decryption Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "caesar.zk",
+      "path": "std_modules/py/cl-caesar-cipher",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "caesar.zk",
+          "checksum": "sha256:a9ae0fd5a11a17ff9cbdd3b71b550336e65dacaad46ba41508afac1adac49cb3",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cookie": {
+      "name": "cl-cookie",
+      "description": "HTTP Cookie Parser and Set-Cookie Header Generator (Python http.cookies parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cookie.zk",
+      "path": "std_modules/py/cl-cookie",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cookie.zk",
+          "checksum": "sha256:f401fcd8f4fd0e53e47deb22365bf1a2819dbc425ec3f36b34e1a4cfc06f488a",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cron-next": {
+      "name": "cl-cron-next",
+      "description": "Standard 5-Field Cron Schedule Pattern Matcher",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cron_next.zk",
+      "path": "std_modules/py/cl-cron-next",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cron_next.zk",
+          "checksum": "sha256:cfa22a6a34b3bd8c139cb2077ea9a17b0b2d52d83159624c6c231a76a485f8e0",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-damerau": {
+      "name": "cl-damerau",
+      "description": "Damerau-Levenshtein String Distance and Alignment Matrix Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "damerau.zk",
+      "path": "std_modules/py/cl-damerau",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "damerau.zk",
+          "checksum": "sha256:ba540d39d8e380001671aeee5fab8f12de214b578f215c0b02903dd5948537d1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dotenv": {
+      "name": "cl-dotenv",
+      "description": "Environment Configuration .env File Parser (Python python-dotenv parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "dotenv.zk",
+      "path": "std_modules/py/cl-dotenv",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "dotenv.zk",
+          "checksum": "sha256:97f1a5a03266aca4800c7da788a2c04445d9e94cbc69b449822a67b495bb4418",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-event-emitter": {
+      "name": "cl-event-emitter",
+      "description": "Synchronous Publish/Subscribe Event Emitter Model (Node.js EventEmitter parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "event_emitter.zk",
+      "path": "std_modules/py/cl-event-emitter",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "event_emitter.zk",
+          "checksum": "sha256:4859982783dc54c2ef05eb0d4a280353a8537df41e5a4cc80f613e8a639aa822",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fuzzy": {
+      "name": "cl-fuzzy",
+      "description": "Fuzzy Subsequence Matching & Search Scorer (Python fuzzywuzzy parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "fuzzy.zk",
+      "path": "std_modules/py/cl-fuzzy",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fuzzy.zk",
+          "checksum": "sha256:8323112492f32170e26b4f0cbab38d29c2bb648e0fc2deddee783b58c60db4b7",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-geojson": {
+      "name": "cl-geojson",
+      "description": "GeoJSON 2D Geometry Bounding Box and Spatial Containment Validator",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "geojson.zk",
+      "path": "std_modules/py/cl-geojson",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "geojson.zk",
+          "checksum": "sha256:2812788326f6e5f234c7ab0a0999b52636fa982d879e0e6efeffd388c2b5f304",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-html-escape": {
+      "name": "cl-html-escape",
+      "description": "HTML Special Entity Escaping and Unescaping Utilities (Python html parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "html_escape.zk",
+      "path": "std_modules/py/cl-html-escape",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "html_escape.zk",
+          "checksum": "sha256:870b4a282fdcaf20fd6bfdfa1fd6989269eb80982e61d10afdd60d83fae974d1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-http-cookies": {
+      "name": "cl-http-cookies",
+      "description": "RFC 6265 HTTP State Management Set-Cookie Header Formatter",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "http_cookies.zk",
+      "path": "std_modules/py/cl-http-cookies",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "http_cookies.zk",
+          "checksum": "sha256:1139c9990febb2b7a8e81b955859f76b0806b586b2e1ee6bf1c43956930f354e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-http-headers": {
+      "name": "cl-http-headers",
+      "description": "RFC 7230 Case-Insensitive HTTP Header MultiMap and Canonicalizer",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "http_headers.zk",
+      "path": "std_modules/py/cl-http-headers",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "http_headers.zk",
+          "checksum": "sha256:c0d76ba86664674eaaeb348bc81093a747a34f28f78f0c6769581e961c41dcfe",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-huffman": {
+      "name": "cl-huffman",
+      "description": "Huffman Byte Frequency Counter and Symbol Statistics Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "huffman.zk",
+      "path": "std_modules/py/cl-huffman",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "huffman.zk",
+          "checksum": "sha256:57690ac83b86ba49424584d70abfad48da0d021ca6b857eb8436a2a4f1ae512c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-huffman-encoder": {
+      "name": "cl-huffman-encoder",
+      "description": "Huffman Symbol Frequency Counter and Alphabet Weight Histogram",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "huffman_encoder.zk",
+      "path": "std_modules/py/cl-huffman-encoder",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "huffman_encoder.zk",
+          "checksum": "sha256:0c8458b1b82fe2dd3c4a6852979da042a79f6353bf1dba95305b3a6160a55f4c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ini": {
+      "name": "cl-ini",
+      "description": "INI Configuration Parser and Key-Value Store (Python configparser parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ini.zk",
+      "path": "std_modules/py/cl-ini",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ini.zk",
+          "checksum": "sha256:a1b69696f912b220ba29f2848d6cb55618e53d1c0cea2c32ea98bdc69abc1cae",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ini-builder": {
+      "name": "cl-ini-builder",
+      "description": "INI Configuration Document Serializer and Section Formatter",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ini_builder.zk",
+      "path": "std_modules/py/cl-ini-builder",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ini_builder.zk",
+          "checksum": "sha256:02cae1387876d4efb3354c4b465145f82f8c3f00f7f1fff1d05fd98ad81f05b4",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ipaddress": {
+      "name": "cl-ipaddress",
+      "description": "IPv4 Address Parser, Validator, and Classification Engine (Python ipaddress parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ipaddress.zk",
+      "path": "std_modules/py/cl-ipaddress",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ipaddress.zk",
+          "checksum": "sha256:53d26c9c69057e0c9ea8fadfd440f187fb1062b26485ea6ec21b02f0e5a26765",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-jaro-winkler": {
+      "name": "cl-jaro-winkler",
+      "description": "Jaro-Winkler String Distance and Phonetic Match Metric",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "jaro_winkler.zk",
+      "path": "std_modules/py/cl-jaro-winkler",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "jaro_winkler.zk",
+          "checksum": "sha256:4746e0cf250a052f13dd2b936cf99cc1793e11e25265f054fdfa5cc0e837ef88",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-json-flatten": {
+      "name": "cl-json-flatten",
+      "description": "Hierarchical JSON Dot-Notation Key Path Flattener",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "json_flatten.zk",
+      "path": "std_modules/py/cl-json-flatten",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "json_flatten.zk",
+          "checksum": "sha256:e8320c1b01cc3f7e93f6db1879958b10f0d6a2d07d8dbf428b14c379206c6d61",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-json-pointer": {
+      "name": "cl-json-pointer",
+      "description": "RFC 6901 JSON Pointer Parser, Escaper and Serializer",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "json_pointer.zk",
+      "path": "std_modules/py/cl-json-pointer",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "json_pointer.zk",
+          "checksum": "sha256:916af0358b81220f0b38acb5c61cec51b10a342b7e39ecd605be39d46784f67d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-json-schema": {
+      "name": "cl-json-schema",
+      "description": "Lightweight Structural JSON Schema Field Validator (Python jsonschema parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "json_schema.zk",
+      "path": "std_modules/py/cl-json-schema",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "json_schema.zk",
+          "checksum": "sha256:acdd6e02e4090d7fd35a449612ca9c3aa8eb8e9f87608cc2c873137273fac207",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-jwt-claims": {
+      "name": "cl-jwt-claims",
+      "description": "RFC 7519 JSON Web Token Claims Validator (exp, nbf, iss, aud)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "jwt_claims.zk",
+      "path": "std_modules/py/cl-jwt-claims",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "jwt_claims.zk",
+          "checksum": "sha256:45aeb7d543aea5465de3fccd404d215e0f4b70b4ab6890c25369231cf958aff4",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-levenshtein-damerau-os": {
+      "name": "cl-levenshtein-damerau-os",
+      "description": "Optimal String Alignment (OSA) Distance and Similarity Metric",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "osa_dist.zk",
+      "path": "std_modules/py/cl-levenshtein-damerau-os",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "osa_dist.zk",
+          "checksum": "sha256:7279ee6840d1b2c26e59ed78d4945d5625b5b40391d12f7c8ee8ca0c10b92c55",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lru-ttl": {
+      "name": "cl-lru-ttl",
+      "description": "Hybrid LRU Cache with Dual Capacity and Sliding Window TTL Invalidation",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lru_ttl.zk",
+      "path": "std_modules/py/cl-lru-ttl",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lru_ttl.zk",
+          "checksum": "sha256:8138a2b2dfed19c002fdaf67e433f0e52498536cdc7015fe8c29a9ff9b5f04ef",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lzw": {
+      "name": "cl-lzw",
+      "description": "Lempel-Ziv-Welch (LZW) Dictionary Compression Encoder",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lzw.zk",
+      "path": "std_modules/py/cl-lzw",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lzw.zk",
+          "checksum": "sha256:e6f52d5326761e08527ab5b4e4b809b3c77ad02496948d646af8d0018887da85",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-markdown": {
+      "name": "cl-markdown",
+      "description": "Markdown Syntax Parser and HTML Line Renderer (Python markdown parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "markdown.zk",
+      "path": "std_modules/py/cl-markdown",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "markdown.zk",
+          "checksum": "sha256:2c096816afef9f3ece4a81085faaa42ee05d08727d612292002d8b0cf2be36c1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-phonenumber": {
+      "name": "cl-phonenumber",
+      "description": "E.164 International Phone Number Parser and Country Calling Code Matcher (Python phonenumbers parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "phonenumber.zk",
+      "path": "std_modules/py/cl-phonenumber",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "phonenumber.zk",
+          "checksum": "sha256:196b795af67e0404ac9a11870003177482998b584db701c659acaba471ffa5c3",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-query-string": {
+      "name": "cl-query-string",
+      "description": "URL Query String Parser and Key-Value Parameter Extractor (Python urllib.parse parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "query_string.zk",
+      "path": "std_modules/py/cl-query-string",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "query_string.zk",
+          "checksum": "sha256:c628efcef497cfb6b5b8350ff9399a24538cfca6fe302306125ed0f8baba1a1a",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ratelimit": {
+      "name": "cl-ratelimit",
+      "description": "Token Bucket Rate Limiting and Token Refill Engine (Python ratelimit parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ratelimit.zk",
+      "path": "std_modules/py/cl-ratelimit",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ratelimit.zk",
+          "checksum": "sha256:7e551db322becfbc391e8b165fde3516b9d143806ab722530701e283198f3128",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-run-length": {
+      "name": "cl-run-length",
+      "description": "Run-Length Encoding (RLE) String Compressor and Decompressor",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "run_length.zk",
+      "path": "std_modules/py/cl-run-length",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "run_length.zk",
+          "checksum": "sha256:e8e46722bd728cc8e2f6ca1e71f91102a133655896498cda1ea0697572e493ac",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-semver-range": {
+      "name": "cl-semver-range",
+      "description": "Semantic Version Range Caret (^) and Tilde (~) Compatibility Solver",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "semver_range.zk",
+      "path": "std_modules/py/cl-semver-range",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "semver_range.zk",
+          "checksum": "sha256:cea86dfe44e502cfaa0c89aff09a7240b96b2c1cbe0fb4fce0de13ca73a4f2d6",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-semver-satisfies": {
+      "name": "cl-semver-satisfies",
+      "description": "SemVer Range Bounded Comparator and Version Satisfier",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "semver_satisfies.zk",
+      "path": "std_modules/py/cl-semver-satisfies",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "semver_satisfies.zk",
+          "checksum": "sha256:1c6280d0fdfb7aa06c4c66b7211e8a7f73433f2da1e5eabb220e0706bf637dbe",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-slug-cleaner": {
+      "name": "cl-slug-cleaner",
+      "description": "URL Slug Formatter, Canonicalizer and Kebab-Case Cleaner",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "slug_cleaner.zk",
+      "path": "std_modules/py/cl-slug-cleaner",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "slug_cleaner.zk",
+          "checksum": "sha256:6be8419cffe2b95414a8ff7bce8021e76ee12d838670989e0a88cff0782d45ba",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-slugify": {
+      "name": "cl-slugify",
+      "description": "URL String Slugifier and Text Normalizer (Python python-slugify parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "slugify.zk",
+      "path": "std_modules/py/cl-slugify",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "slugify.zk",
+          "checksum": "sha256:36f913c2766babf4af3a483b3283ccffba3636dda4d6359e779a173f26bd8b73",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-statistics": {
+      "name": "cl-statistics",
+      "description": "Descriptive Statistics Engine (Python statistics module parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "statistics.zk",
+      "path": "std_modules/py/cl-statistics",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "statistics.zk",
+          "checksum": "sha256:6bd558c0a94b7062d936ddf4777f784b0239c2d035f068f261a3bae97e0722b4",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-template": {
+      "name": "cl-template",
+      "description": "Mustache/Jinja2-Style String Interpolation Engine (Python jinja2 parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "template_engine.zk",
+      "path": "std_modules/py/cl-template",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "template_engine.zk",
+          "checksum": "sha256:8eb0f45f0dcf6cf0f1df9acca6042a616af0e2dd48245af31317646088ad1135",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-trie": {
+      "name": "cl-trie",
+      "description": "Prefix Tree (Trie) Lexical Search Structure (Python pygtrie parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "trie.zk",
+      "path": "std_modules/py/cl-trie",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "trie.zk",
+          "checksum": "sha256:5df3e4291cc63eb10d316d77e742d29b082a26bffd3683cb8f6b54ba67f39bd1",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ttl-cache": {
+      "name": "cl-ttl-cache",
+      "description": "Time-To-Live (TTL) Cache with Expired Key Invalidation (Redis EXPIRE parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ttl_cache.zk",
+      "path": "std_modules/py/cl-ttl-cache",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ttl_cache.zk",
+          "checksum": "sha256:9bde59bb5d437ebed9d567247312858c8a163d4ab29d84077d37a7e5124610ac",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ulid": {
+      "name": "cl-ulid",
+      "description": "Universally Unique Lexicographically Sortable Identifier (Python ulid parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ulid.zk",
+      "path": "std_modules/py/cl-ulid",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ulid.zk",
+          "checksum": "sha256:6ccc18ff9b01dc00daafb6fadbc0a461ca34ecaed7729bd440a6899ab89fed75",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-url-builder": {
+      "name": "cl-url-builder",
+      "description": "RFC 3986 Standardized URI Builder and Query Formatter",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "url_builder.zk",
+      "path": "std_modules/py/cl-url-builder",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "url_builder.zk",
+          "checksum": "sha256:04054ff979f5645ef7118a520f666a4c21ea7f3cd1df1a8753d8c3d3ae5a9157",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-url-normalize": {
+      "name": "cl-url-normalize",
+      "description": "RFC 3986 Canonical URL Path Normalizer and Dot-Segment Eliminator",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "url_normalize.zk",
+      "path": "std_modules/py/cl-url-normalize",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "url_normalize.zk",
+          "checksum": "sha256:344f00efeb752b13f624b3ee2c4d579d6370c7fad69f30192936a795cd265a69",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-uuid-v4": {
+      "name": "cl-uuid-v4",
+      "description": "RFC 4122 Universally Unique Identifier Version 4 Generator and Validator",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "uuid_v4.zk",
+      "path": "std_modules/py/cl-uuid-v4",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "uuid_v4.zk",
+          "checksum": "sha256:2377f6c61c7bb523a05acd89d724e619dad9ecd9d9121672786583f074bb663c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-aabb3d": {
+      "name": "cl-aabb3d",
+      "description": "3D Axis-Aligned Bounding Box (AABB) Geometry, Intersection, and Point Containment",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "aabb3d.zk",
+      "path": "std_modules/rs/cl-aabb3d",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "aabb3d.zk",
+          "checksum": "sha256:ae0fbb35a35b9e55a2badb113264d85677a8ccbf5f47aa55ac268d179c19fa21",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-astar3d": {
+      "name": "cl-astar3d",
+      "description": "3D Spatial A* Heuristic Pathfinder for Multi-Layer Grid Navigation",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "astar3d.zk",
+      "path": "std_modules/rs/cl-astar3d",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "astar3d.zk",
+          "checksum": "sha256:2ab186cad5cb3c8d928c2b38c6b70eec4f1bab237fb1f7fc39eed7f9a4b2472e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-base16": {
+      "name": "cl-base16",
+      "description": "Base16 RFC 4648 Nibble Stream Hexadecimal Fast Serializer",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "base16.zk",
+      "path": "std_modules/rs/cl-base16",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "base16.zk",
+          "checksum": "sha256:0bbc5308dd744816ec80a3099126dc36903bea83bc859e47d99091988ad839b0",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-binary-search-tree-avl": {
+      "name": "cl-binary-search-tree-avl",
+      "description": "AVL Self-Balancing Binary Search Tree Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "avl_tree.zk",
+      "path": "std_modules/rs/cl-binary-search-tree-avl",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "avl_tree.zk",
+          "checksum": "sha256:32fdb09ecb60ffacb3bc4d3077b34fa2f965c10cc114097027b9a357979ba7c8",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bit-array": {
+      "name": "cl-bit-array",
+      "description": "High-Density 64-Bit Word Pack Bit Vector and Bitmap Array Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bit_array.zk",
+      "path": "std_modules/rs/cl-bit-array",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bit_array.zk",
+          "checksum": "sha256:933056cb4c8ae39d89439bb98a91a42692095bda3b9a9e179d0b90b87371d916",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bitset": {
+      "name": "cl-bitset",
+      "description": "Dense BitSet Array with Bitwise Operators (Rust bitset crate parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bit_set.zk",
+      "path": "std_modules/rs/cl-bitset",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bit_set.zk",
+          "checksum": "sha256:75c0a79e6c17712d1ebf4bd09cf76616987e4a624a0a728a50904fc5ccff7737",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bloom-filter": {
+      "name": "cl-bloom-filter",
+      "description": "Probabilistic Bloom Filter Set Membership with Multi-Hash Hashing",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bloom_filter.zk",
+      "path": "std_modules/rs/cl-bloom-filter",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bloom_filter.zk",
+          "checksum": "sha256:b25171ed53ef979c6974ffe5571b9e88636ba13063cc4e58d79b6f68c8e33a93",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-bst": {
+      "name": "cl-bst",
+      "description": "Arena-Based Binary Search Tree (Rust bst parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "bst.zk",
+      "path": "std_modules/rs/cl-bst",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "bst.zk",
+          "checksum": "sha256:8f770ec5f63cc26f81902918c2105206ae33af21fa52d09eb18cb34bee7419fc",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-circular-queue": {
+      "name": "cl-circular-queue",
+      "description": "Bounded FIFO Ring Buffer Circular Queue with Wraparound",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "circ_queue.zk",
+      "path": "std_modules/rs/cl-circular-queue",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "circ_queue.zk",
+          "checksum": "sha256:c70de1cd9e63048f8384a937ec0af4c7c1305dd69fe4cc9bc6bb53d640c4a59a",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-clamp": {
+      "name": "cl-clamp",
+      "description": "Numeric Saturation Arithmetic, Interval Clamping and Linear Interpolation",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "clamp.zk",
+      "path": "std_modules/rs/cl-clamp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "clamp.zk",
+          "checksum": "sha256:3202a430c986b95fa8b8435280c78d9befcbb1ea4d9fd07dd02c620b0df60b7e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-complex": {
+      "name": "cl-complex",
+      "description": "Complex Number Arithmetic Engine (Rust num-complex parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "complex.zk",
+      "path": "std_modules/rs/cl-complex",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "complex.zk",
+          "checksum": "sha256:04031587cebf1b1fd6adfeee6e2e471ea0dd28a491c3f48010c220586284ddd5",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-consistent-hash": {
+      "name": "cl-consistent-hash",
+      "description": "Consistent Hashing Ring with Wrap-Around Partition Routing",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "consistent_hash.zk",
+      "path": "std_modules/rs/cl-consistent-hash",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "consistent_hash.zk",
+          "checksum": "sha256:a1ddc0ae5ed852e9b6549deb55368a3cf87fb956218e294949432fa54bf9e20c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crafting-grid": {
+      "name": "cl-crafting-grid",
+      "description": "2D/3D Voxel Crafting Matrix Pattern Matcher for Shaped and Shapeless Recipes",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "crafting_grid.zk",
+      "path": "std_modules/rs/cl-crafting-grid",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crafting_grid.zk",
+          "checksum": "sha256:3b378434a489c0ee4d5aa19ac4d5ce1cbe793486f3bb4ecee693b566c430c423",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crc32": {
+      "name": "cl-crc32",
+      "description": "IEEE 802.3 CRC-32 Cyclic Redundancy Checksum (Rust crc32fast parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "crc32.zk",
+      "path": "std_modules/rs/cl-crc32",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crc32.zk",
+          "checksum": "sha256:619d133c3e5519d6537a636f50d397a859825d3736c9dfe230f534f32b4e174d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-crc64": {
+      "name": "cl-crc64",
+      "description": "CRC-64-ECMA-182 64-Bit High-Capacity Polynomial Checksum",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "crc64.zk",
+      "path": "std_modules/rs/cl-crc64",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "crc64.zk",
+          "checksum": "sha256:f8f064ed81a015f73e7f75b94174628b519debee5e61f6752ee29f34c50ef266",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dijkstra": {
+      "name": "cl-dijkstra",
+      "description": "Dijkstra Single-Source Shortest Path Graph Optimization Algorithm",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "dijkstra.zk",
+      "path": "std_modules/rs/cl-dijkstra",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "dijkstra.zk",
+          "checksum": "sha256:548a5a0d1fa913aa69a7ef71563c9d7144e1ea47991355dfd0f3985363bd83bc",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fnv": {
+      "name": "cl-fnv",
+      "description": "FNV-1a Non-Cryptographic Fast Hasher (Rust fnv parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "fnv.zk",
+      "path": "std_modules/rs/cl-fnv",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fnv.zk",
+          "checksum": "sha256:7fd5083f8df912c2362201049a1a9ae38277ead8b769ad7a83eb63e69aef3049",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-geometry-3d": {
+      "name": "cl-geometry-3d",
+      "description": "3D Vector Algebra, Dot Product, Cross Product and L2 Norm Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "geometry_3d.zk",
+      "path": "std_modules/rs/cl-geometry-3d",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "geometry_3d.zk",
+          "checksum": "sha256:e942103f208b17fe54120ff65b6be72f97fac57c3808f50647bc1f672ae4ffc3",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-geometry2d": {
+      "name": "cl-geometry2d",
+      "description": "2D Computational Geometry & Shoelace Polygon Area (Rust geo parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "geometry2d.zk",
+      "path": "std_modules/rs/cl-geometry2d",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "geometry2d.zk",
+          "checksum": "sha256:58960df825f3a508a7ec9973f288353176cd1b827a3e3bc09d903c917a12ed66",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-graph-adj": {
+      "name": "cl-graph-adj",
+      "description": "Directed Graph Adjacency Representation and Degree Calculator",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "graph_adj.zk",
+      "path": "std_modules/rs/cl-graph-adj",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "graph_adj.zk",
+          "checksum": "sha256:0a18cb0ab109cc878abaf35e9f25f381d8f9c5636faa676afd722e5f20debce9",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-gzip-crc": {
+      "name": "cl-gzip-crc",
+      "description": "Deflate/Gzip Header Inspector and Adler-32 Rolling Checksum",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "gzip_crc.zk",
+      "path": "std_modules/rs/cl-gzip-crc",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "gzip_crc.zk",
+          "checksum": "sha256:51acc5faa6a645c32eade9336dd451566ee558effa3478fb61f458f6d1035d84",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-heap-sort": {
+      "name": "cl-heap-sort",
+      "description": "In-Place Binary Heap Sort Algorithm with O(n log n) Bound",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "heap_sort.zk",
+      "path": "std_modules/rs/cl-heap-sort",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "heap_sort.zk",
+          "checksum": "sha256:e4c1e3f3dfa27ddbb59cbbbd4b4b1bfd2507b24c05efe54c0dcaa999faa20ccc",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-interval": {
+      "name": "cl-interval",
+      "description": "1D Interval Math and Overlap Checker (Rust interval parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "interval.zk",
+      "path": "std_modules/rs/cl-interval",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "interval.zk",
+          "checksum": "sha256:0d0bddb6213ec62e268dde0272942560a1052730af7d3b7157752d9c753049e6",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-levenshtein-matrix": {
+      "name": "cl-levenshtein-matrix",
+      "description": "2D Dynamic Programming Levenshtein Distance Matrix Table",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lev_matrix.zk",
+      "path": "std_modules/rs/cl-levenshtein-matrix",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lev_matrix.zk",
+          "checksum": "sha256:98f666fe5568e2d078294bc4e71540c6e9229fa13e1b78f41f16034c45d303ad",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lru": {
+      "name": "cl-lru",
+      "description": "Least Recently Used (LRU) Cache (Rust lru crate parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lru.zk",
+      "path": "std_modules/rs/cl-lru",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lru.zk",
+          "checksum": "sha256:5429ad616a9cbf377bef0dd88f37a3fee64964cd2350d0deee181601071aee91",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lru-cache": {
+      "name": "cl-lru-cache",
+      "description": "Bounded Least-Recently-Used (LRU) In-Memory Cache with Eviction",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lru_cache.zk",
+      "path": "std_modules/rs/cl-lru-cache",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lru_cache.zk",
+          "checksum": "sha256:511dc75206022ce0df897e384ec82bb35387e5455bd6bf8abd22e565350351d9",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-lsm": {
+      "name": "cl-lsm",
+      "description": "Log-Structured Merge Tree MemTable and Tombstone Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "lsm.zk",
+      "path": "std_modules/rs/cl-lsm",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "lsm.zk",
+          "checksum": "sha256:d6040f6b291164e2050bfdaf270deae8d27eec71d620e96e4729fcd5efd949cf",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-matrix": {
+      "name": "cl-matrix",
+      "description": "Dense 2D Matrix Algebra, Transpose and Multiplication Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "matrix_math.zk",
+      "path": "std_modules/rs/cl-matrix",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "matrix_math.zk",
+          "checksum": "sha256:598fbecdcaf9a3a2ddb7f8135b03c87c37b0d523d7629df4c84dee7c90696e6c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-matrix-decomp": {
+      "name": "cl-matrix-decomp",
+      "description": "Matrix Determinant, Trace and Linear Algebraic Decomposition Primitives",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "matrix_decomp.zk",
+      "path": "std_modules/rs/cl-matrix-decomp",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "matrix_decomp.zk",
+          "checksum": "sha256:b97afa50e110ac45a48471ea981b446e1915fee92f789b34ab17374a283ebf1b",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-max-pq": {
+      "name": "cl-max-pq",
+      "description": "Indexed Max-Priority Queue Scheduling and Extraction Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "max_pq.zk",
+      "path": "std_modules/rs/cl-max-pq",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "max_pq.zk",
+          "checksum": "sha256:2b2c118d52e9106da1e489399c6a7607289fea9da41427011544e94dd7b5cdcf",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-murmur2": {
+      "name": "cl-murmur2",
+      "description": "MurmurHash2 32-Bit High-Performance Non-Cryptographic Hasher",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "murmur2.zk",
+      "path": "std_modules/rs/cl-murmur2",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "murmur2.zk",
+          "checksum": "sha256:2a041e1227e3ebbbd0cf5a91d44c5f9239d666f466b3e39b5561b273e3fb382c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-murmur3": {
+      "name": "cl-murmur3",
+      "description": "MurmurHash3 32-Bit Non-Cryptographic Fast Hashing Algorithm",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "murmur3.zk",
+      "path": "std_modules/rs/cl-murmur3",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "murmur3.zk",
+          "checksum": "sha256:f19849198604ec751cd25eb3b2e6538fe4590eb718e658c112e44c1f40de1b21",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-perlin-noise": {
+      "name": "cl-perlin-noise",
+      "description": "Procedural 2D/3D Gradient Noise and Multi-Octave Fractal Brownian Motion (fBm)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "perlin_noise.zk",
+      "path": "std_modules/rs/cl-perlin-noise",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "perlin_noise.zk",
+          "checksum": "sha256:a3496afb3f533e99773f8d316e0fafdcc18672ddf2e3e9e1f124058f932fc365",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-polyline": {
+      "name": "cl-polyline",
+      "description": "Google Maps Encoded Polyline Coordinate Algorithm",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "polyline.zk",
+      "path": "std_modules/rs/cl-polyline",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "polyline.zk",
+          "checksum": "sha256:784b3d3dc3c8e76948e27351b06d4366cd559b08676c890e685b18fdb64bf569",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-priority-min-heap": {
+      "name": "cl-priority-min-heap",
+      "description": "Binary Min-Heap Priority Queue Scheduler with O(log n) Extraction",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "min_heap.zk",
+      "path": "std_modules/rs/cl-priority-min-heap",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "min_heap.zk",
+          "checksum": "sha256:905e45dec2dbb3ec237a031c51fcdda6319123266642c2eb13bf9b9a5bf891e7",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-quaternion": {
+      "name": "cl-quaternion",
+      "description": "3D Spatial Rotation Quaternion Algebra (Rust nalgebra/glam parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "quaternion.zk",
+      "path": "std_modules/rs/cl-quaternion",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "quaternion.zk",
+          "checksum": "sha256:711be6e1a94b03bbd93a769bb4fec15a5395a58741ee847488d3477581fe942d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-quicksort": {
+      "name": "cl-quicksort",
+      "description": "In-Place Lomuto Partition Quicksort and Binary Search Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "quicksort.zk",
+      "path": "std_modules/rs/cl-quicksort",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "quicksort.zk",
+          "checksum": "sha256:e91ba42a8db536ea3469e35198e2409df54d1eca7866d2900bf91630f0ff2636",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-radix-sort": {
+      "name": "cl-radix-sort",
+      "description": "Non-Negative Integer LSD Radix Sort Linear-Time Algorithm",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "radix_sort.zk",
+      "path": "std_modules/rs/cl-radix-sort",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "radix_sort.zk",
+          "checksum": "sha256:9967b8ceafa7fba22f3919ca5b062280a0b013ede6a3cff602d77a23bcd8a599",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-rbtree": {
+      "name": "cl-rbtree",
+      "description": "Arena-Based Red-Black Tree Search, Min and Max Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "rbtree.zk",
+      "path": "std_modules/rs/cl-rbtree",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rbtree.zk",
+          "checksum": "sha256:b8b028e5bea6939955e0c3fe86cbe8b43e9499557dd0962ae93f3f2b22b0bacc",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ring-buffer-bounded": {
+      "name": "cl-ring-buffer-bounded",
+      "description": "High-Throughput Fixed-Capacity Circular Overwrite Ring Buffer",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ring_buffer.zk",
+      "path": "std_modules/rs/cl-ring-buffer-bounded",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ring_buffer.zk",
+          "checksum": "sha256:d8eb73bf7d12869b819629fa953b378c529707c604936fb0a11babbb0286d34e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ringbuffer": {
+      "name": "cl-ringbuffer",
+      "description": "Fixed-Capacity Circular Ring Buffer (Rust ringbuffer parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "ringbuffer.zk",
+      "path": "std_modules/rs/cl-ringbuffer",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "ringbuffer.zk",
+          "checksum": "sha256:cead6bb109bdd1125e6c841c3193ab2d68834c63e3f3abe8e56849eb4cde829a",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-semver-parser": {
+      "name": "cl-semver-parser",
+      "description": "Semantic Versioning 2.0.0 Parser and Comparison Engine (Rust semver parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "semver_parser.zk",
+      "path": "std_modules/rs/cl-semver-parser",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "semver_parser.zk",
+          "checksum": "sha256:e3efa1cf334c987cd2113a29adc4f38c07fb5a0cc7898178c73efc337f4dacf2",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sha1": {
+      "name": "cl-sha1",
+      "description": "RFC 3174 Secure Hash Algorithm 1 (SHA-1) Pure Implementation",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "sha1.zk",
+      "path": "std_modules/rs/cl-sha1",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sha1.zk",
+          "checksum": "sha256:ceaccbc0190b327feaa72860b67c8f5a2888ad7b026ed73b521edb406752c539",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-simd-math": {
+      "name": "cl-simd-math",
+      "description": "High-Performance Vector Math Primitives (Dot Product, Scaling, Cosine Similarity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "simd_math.zk",
+      "path": "std_modules/rs/cl-simd-math",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "simd_math.zk",
+          "checksum": "sha256:d11bb43d61697a4b11b9b2a30356a717c82f33fe78a23dfee0bc0b970f4c77a4",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-siphash": {
+      "name": "cl-siphash",
+      "description": "HalfSipHash-2-4 32-Bit PRF Hash Function (Hash-DOS protection parity)",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "siphash.zk",
+      "path": "std_modules/rs/cl-siphash",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "siphash.zk",
+          "checksum": "sha256:88354c919adae887d7568d10ee8eee6e9e9794f9bf44bdb38aac515364e70cde",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stats-rolling": {
+      "name": "cl-stats-rolling",
+      "description": "Bounded Rolling Window Statistics and Moving Averages Engine",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "rolling_stats.zk",
+      "path": "std_modules/rs/cl-stats-rolling",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "rolling_stats.zk",
+          "checksum": "sha256:3f9035a12525f817c52829d4aa9ace5a978af00ffae43a97d77f20f40212cbbb",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-stopwatch": {
+      "name": "cl-stopwatch",
+      "description": "High-Precision Elapsed Time Stopwatch and Lap Timer Model",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "stopwatch.zk",
+      "path": "std_modules/rs/cl-stopwatch",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "stopwatch.zk",
+          "checksum": "sha256:9d3f7cf245d3315a29f8d42042f962f5e00358266df98cf5a5a4201c4e88f25e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-voxel": {
+      "name": "cl-voxel",
+      "description": "3D VoxelArea Stride Flat Indexing and 16x16x16 Chunk MapBlock Container",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "voxel.zk",
+      "path": "std_modules/rs/cl-voxel",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "voxel.zk",
+          "checksum": "sha256:588d1f659018405fa09044955271677c5a50fe5a08365532e73f340d11ff1a8b",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-voxel-raycast": {
+      "name": "cl-voxel-raycast",
+      "description": "3D Digital Differential Analyzer (DDA) Grid Raycaster with Face Normal Detection",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "voxel_raycast.zk",
+      "path": "std_modules/rs/cl-voxel-raycast",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "voxel_raycast.zk",
+          "checksum": "sha256:938efb3bb185300cec93f421af1da89b6161e3909ded46763fdcdc27fdf015c7",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-binascii": {
+      "name": "cl-binascii",
+      "description": "Cluster package: cl-binascii",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "binascii.zk",
+      "path": "packages/cl-binascii",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "binascii.zk",
+          "checksum": "sha256:7b0bcfaafc5c7de779c17ebf72f4f46565453768c111c630cf0e39ab8fcf2c7c",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cache-server": {
+      "name": "cl-cache-server",
+      "description": "Cluster package: cl-cache-server",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cache_server.zk",
+      "path": "packages/cl-cache-server",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cache_server.zk",
+          "checksum": "sha256:8745599b1416cd7957e391f31f9f98caa3e6364a3a0b04b6f20dcc149e634221",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-contextlib": {
+      "name": "cl-contextlib",
+      "description": "Cluster package: cl-contextlib",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "contextlib.zk",
+      "path": "packages/cl-contextlib",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "contextlib.zk",
+          "checksum": "sha256:a36ccd58c21f381c4677f1fce3c2f9ae201db415f6f3115453d82636a6c649d4",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-copy": {
+      "name": "cl-copy",
+      "description": "Cluster package: cl-copy",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "copy.zk",
+      "path": "packages/cl-copy",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "copy.zk",
+          "checksum": "sha256:8ed32e471d93e06feacf4984d084b70df9815808873d4eea7f306f899482a4ca",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-cv": {
+      "name": "cl-cv",
+      "description": "Cluster package: cl-cv",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "cv.zk",
+      "path": "packages/cl-cv",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "cv.zk",
+          "checksum": "sha256:69eaacf267497a970601a5977bb8c232d3c9669ee397e71d0811a4e9075db000",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dataclasses": {
+      "name": "cl-dataclasses",
+      "description": "Cluster package: cl-dataclasses",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "package.zk",
+      "path": "packages/cl-dataclasses",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "package.zk",
+          "checksum": "sha256:60083dd57e8bbac061108c4b4a296d81d0c090cb5df9e2818c534367d000d797",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-dl": {
+      "name": "cl-dl",
+      "description": "Cluster package: cl-dl",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "dl.zk",
+      "path": "packages/cl-dl",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "dl.zk",
+          "checksum": "sha256:a9e326936532c5ee9cc7673bba4503d9db23a3609dfdc3a9368c6212aeee15e2",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-fnmatch": {
+      "name": "cl-fnmatch",
+      "description": "Cluster package: cl-fnmatch",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "fnmatch.zk",
+      "path": "packages/cl-fnmatch",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "fnmatch.zk",
+          "checksum": "sha256:e2374ac8e43734046f7144cde5c39820bbdd4b89f197cf81f95f8c5f18ed1e57",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-ml": {
+      "name": "cl-ml",
+      "description": "Cluster package: cl-ml",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "package.zk",
+      "path": "packages/cl-ml",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "package.zk",
+          "checksum": "sha256:e6c04587772305e8e29afe65a3e55552102943235e4acce1ae4794e2fed42b7d",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-orm": {
+      "name": "cl-orm",
+      "description": "Cluster package: cl-orm",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "orm.zk",
+      "path": "packages/cl-orm",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "orm.zk",
+          "checksum": "sha256:1216f7bb356c0de568c507dc80713f1906052c33b27c885457bef6bed23eb6a9",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-pandas": {
+      "name": "cl-pandas",
+      "description": "Cluster package: cl-pandas",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "pandas.zk",
+      "path": "packages/cl-pandas",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "pandas.zk",
+          "checksum": "sha256:ba5633c7e493d4f2fcac6719378dc684e5a315b89834f6639972c902e15b672e",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-plot": {
+      "name": "cl-plot",
+      "description": "Cluster package: cl-plot",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "plot.zk",
+      "path": "packages/cl-plot",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "plot.zk",
+          "checksum": "sha256:cbefe5fe0fcb88a36b09154f3aaad10b3f9dd9590883cca8c398e27a820aeaef",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-pprint": {
+      "name": "cl-pprint",
+      "description": "Cluster package: cl-pprint",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "pprint.zk",
+      "path": "packages/cl-pprint",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "pprint.zk",
+          "checksum": "sha256:9fb3dcfaf128e9975ac690ee843ee986fa0c0cbb878a05c3e203da648cd38a11",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-sci": {
+      "name": "cl-sci",
+      "description": "Cluster package: cl-sci",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "sci.zk",
+      "path": "packages/cl-sci",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "sci.zk",
+          "checksum": "sha256:476683e4069cc45b1ac1cad78473dfece2b280cd1026158701445c6a12cae869",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-secrets": {
+      "name": "cl-secrets",
+      "description": "Cluster package: cl-secrets",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "secrets.zk",
+      "path": "packages/cl-secrets",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "secrets.zk",
+          "checksum": "sha256:81a4d5706bf0f6389c6eabb4d278feb6a8c6689db344f9dce9ca605e826a94c3",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-struct": {
+      "name": "cl-struct",
+      "description": "Cluster package: cl-struct",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "struct.zk",
+      "path": "packages/cl-struct",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "struct.zk",
+          "checksum": "sha256:02949a24f68004f0f5e772dcbec7474af362db36d2393d4c174bd5067db4f9a0",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-typing": {
+      "name": "cl-typing",
+      "description": "Cluster package: cl-typing",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "typing.zk",
+      "path": "packages/cl-typing",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "typing.zk",
+          "checksum": "sha256:2251c26c59f6beda8fc66a3fda7ec31cdb446a5a0e6a1661cbe761ac12e15e37",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    },
+    "cl-web": {
+      "name": "cl-web",
+      "description": "Cluster package: cl-web",
+      "latest": "0.1.0",
+      "license": "MIT",
+      "main": "package.zk",
+      "path": "packages/cl-web",
+      "versions": {
+        "0.1.0": {
+          "version": "0.1.0",
+          "main": "package.zk",
+          "checksum": "sha256:f5b5351abc34ae9fab325a3c21b47666fb79514e03cec1923bfe32f6c6426a0f",
+          "yanked": false,
+          "license": "MIT",
+          "dependencies": {}
+        }
+      }
+    }
+  },
+  "cl-zlib": {
+    "version": "0.1.0",
+    "description": "Pure Cluster zero-cost C-ABI bridge for z",
+    "path": "../../../../../../tmp/std_test/cl-zlib",
+    "sha256": "626acd789991129718d274dfa4505bd78c9ee3d54fc685ffece18af0da447e45",
+    "abi": "c-native-zero-cost"
+  }
+}

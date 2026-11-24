@@ -1,0 +1,36 @@
+cpp_inject "#include <matplot/matplot.h>"
+
+fn plot(x: auto, y: auto, label: string = ""):
+    cpp_inject "std::vector<double> xv, yv;"
+    cpp_inject "for (auto v : x) xv.push_back(v);"
+    cpp_inject "for (auto v : y) yv.push_back(v);"
+    cpp_inject "matplot::plot(xv, yv);"
+
+fn scatter(x: auto, y: auto, label: string = ""):
+    cpp_inject "std::vector<double> xv, yv;"
+    cpp_inject "for (auto v : x) xv.push_back(v);"
+    cpp_inject "for (auto v : y) yv.push_back(v);"
+    cpp_inject "matplot::scatter(xv, yv);"
+
+fn hist(data: auto, bins: int = 10, label: string = ""):
+    cpp_inject "std::vector<double> dv;"
+    cpp_inject "for (auto v : data) dv.push_back(v);"
+    cpp_inject "matplot::hist(dv, bins);"
+
+fn title(t: string):
+    cpp_inject "matplot::title(t);"
+
+fn xlabel(l: string):
+    cpp_inject "matplot::xlabel(l);"
+
+fn ylabel(l: string):
+    cpp_inject "matplot::ylabel(l);"
+
+fn legend():
+    cpp_inject "matplot::legend();"
+
+fn show():
+    cpp_inject "matplot::show();"
+
+fn save(path: string):
+    cpp_inject "matplot::save(path);"

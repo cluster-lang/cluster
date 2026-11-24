@@ -1,0 +1,6 @@
+name: "cl-base64"
+version: "0.1.0"
+description: "Base64 encoding and decoding"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

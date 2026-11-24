@@ -1,0 +1,9 @@
+name: "cl-pandas"
+version: "0.1.0"
+description: "DataFrame with CSV I/O, groupby, merge, filter (Eigen-backed)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-numpy@0.1.0", "cl-fs@0.1.0"]
+cpp_requires:
+  - "eigen3"
+EOP

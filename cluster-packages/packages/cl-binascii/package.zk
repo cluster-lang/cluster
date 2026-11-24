@@ -1,0 +1,6 @@
+name: "cl-binascii"
+version: "0.1.0"
+description: "Binary/ASCII conversions (hex, base64, CRC)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

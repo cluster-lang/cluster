@@ -1,0 +1,9 @@
+name: "cl-cv"
+version: "0.1.0"
+description: "Computer vision with OpenCV (read, write, filters, edges)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []
+cpp_requires:
+  - "opencv"
+EOP

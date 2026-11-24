@@ -1,0 +1,21 @@
+import "cl-json"
+
+fn route_get(path: string, handler: auto):
+    cpp_inject "// Define GET route"
+    cpp_inject "CROW_ROUTE(app, path)([handler](const crow::request& req) {"
+    cpp_inject "    return crow::response(handler(req.url_params));"
+    cpp_inject "});"
+
+fn route_post(path: string, handler: auto):
+    cpp_inject "// Define POST route"
+    cpp_inject "CROW_ROUTE(app, path).methods(crow::HTTPMethod::POST)([handler](const crow::request& req) {"
+    cpp_inject "    return crow::response(handler(req.body));"
+    cpp_inject "});"
+
+fn serve_static(path: string, dir: string):
+    cpp_inject "CROW_ROUTE(app, path)([dir]() {"
+    cpp_inject "    return crow::response(crow::mustache::load(dir));"
+    cpp_inject "});"
+
+fn run(port: int = 8080):
+    cpp_inject "app.port(port).multithreaded().run();"

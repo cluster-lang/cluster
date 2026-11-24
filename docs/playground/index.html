@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cluster Language Playground | Fast, Memory-Safe Systems Language</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-area">
+      <span class="logo-badge">CL</span>
+      <h1>Cluster Playground <span class="version-tag">v1.0.0</span></h1>
+    </div>
+    <div class="header-actions">
+      <select id="example-select">
+        <option value="hello">Hello World</option>
+        <option value="fib">Fibonacci Benchmark</option>
+        <option value="kv">In-Memory KV Store</option>
+        <option value="vector">Vectors & Models</option>
+        <option value="matrix">Matrix Multiplication</option>
+      </select>
+      <button id="run-btn" class="btn btn-primary">▶ Run Code (Ctrl+Enter)</button>
+      <button id="clear-btn" class="btn btn-secondary">Clear Terminal</button>
+      <a href="https://github.com/cluster-lang/cluster" target="_blank" class="btn btn-github">GitHub</a>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="editor-pane">
+      <div class="pane-header">
+        <span>main.cl</span>
+        <span class="target-badge">wasm32-wasi / native -O3</span>
+      </div>
+      <div class="editor-wrapper">
+        <div id="line-numbers" class="line-numbers"></div>
+        <textarea id="code-editor" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <div class="terminal-pane">
+      <div class="pane-header">
+        <span>Execution Terminal</span>
+        <span id="timing-badge" class="timing-badge">Ready</span>
+      </div>
+      <pre id="terminal-output" class="terminal-output">Press "Run Code" to compile and execute Cluster code...</pre>
+    </div>
+  </main>
+
+  <script src="playground.js"></script>
+</body>
+</html>

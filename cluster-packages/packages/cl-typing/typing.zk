@@ -1,0 +1,3 @@
+// Type hints — these are just documentation for type annotations
+// The C++ compiler handles type checking natively
+// Usage: x := Optional[int](42) or x := Optional[int]()

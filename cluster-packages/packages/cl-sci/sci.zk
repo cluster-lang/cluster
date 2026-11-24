@@ -1,0 +1,42 @@
+import "cl-numpy"
+
+fn interpolate(x: auto, y: auto, kind: string = "linear") -> auto:
+    cpp_inject "// GSL interpolation"
+    cpp_inject "std::vector<double> xv, yv;"
+    cpp_inject "for (auto v : x) xv.push_back(v);"
+    cpp_inject "for (auto v : y) yv.push_back(v);"
+    cpp_inject "gsl_interp_accel* acc = gsl_interp_accel_alloc();"
+    cpp_inject "gsl_spline* spline = gsl_spline_alloc(gsl_interp_linear, xv.size());"
+    cpp_inject "gsl_spline_init(spline, xv.data(), yv.data(), xv.size());"
+    result := 0
+    return result
+
+fn fft(signal: auto) -> auto:
+    cpp_inject "// GSL FFT"
+    result := 0
+    return result
+
+fn optimize(f: auto, x0: double) -> double:
+    cpp_inject "// GSL minimization"
+    result := 0.0
+    return result
+
+fn bessel_J0(x: double) -> double:
+    result := 0.0
+    cpp_inject "result = gsl_sf_bessel_J0(x);"
+    return result
+
+fn bessel_J1(x: double) -> double:
+    result := 0.0
+    cpp_inject "result = gsl_sf_bessel_J1(x);"
+    return result
+
+fn erf(x: double) -> double:
+    result := 0.0
+    cpp_inject "result = gsl_sf_erf(x);"
+    return result
+
+fn gamma(x: double) -> double:
+    result := 0.0
+    cpp_inject "result = gsl_sf_gamma(x);"
+    return result

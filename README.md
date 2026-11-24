@@ -60,6 +60,64 @@ cl build main.cl -o main
 ./main
 ```
 
+### 4. Interactive REPL
+
+Start an immediate interactive Cluster session with zero setup:
+
+```bash
+cl repl
+```
+
+### 5. Package Management (550,000+ Modules)
+
+Discover and install ecosystem modules directly into your project:
+
+```bash
+# Search package registry
+cl search adler
+
+# Add and install module to ./deps/
+cl add cl-adler32
+
+# List project dependencies
+cl list
+```
+
+### 6. Built-in Test Suite Runner
+
+Execute test suites with millisecond precision:
+
+```bash
+cl test
+```
+
+### 7. Native Language Server Protocol (LSP)
+
+Start the JSON-RPC language server daemon for real-time diagnostics, autocomplete, and hover docs:
+
+```bash
+cl lsp
+```
+
+---
+
+## 🌐 Interactive Browser Playground
+
+Try Cluster directly in your browser without installing anything:
+* Open the [Cluster Web Playground](docs/playground/index.html) to write, compile, and execute Cluster code with live terminal output.
+
+---
+
+## ⚡ GitHub Actions CI/CD Integration
+
+Use the official Cluster setup action in your CI/CD workflows:
+
+```yaml
+- uses: cluster-lang/setup-cluster@v1
+  with:
+    version: '1.0.0'
+```
+
 ---
 
 ## 🛠️ Toolchain Layout

@@ -1,0 +1,48 @@
+fn fnmatch(name: string, pattern: string) -> bool:
+    result: bool := false
+    cpp_inject "const char* s = name.c_str();"
+    cpp_inject "const char* p = pattern.c_str();"
+    cpp_inject "auto match = [](const char* s, const char* p, auto& recurse) -> bool {"
+    cpp_inject "    if (*p == '\0') return *s == '\0';"
+    cpp_inject "    if (*p == '*') { while (*(p+1) == '*') p++; return recurse(s, p+1, recurse) || (*s && recurse(s+1, p, recurse)); }"
+    cpp_inject "    if (*p == '?') return *s && recurse(s+1, p+1, recurse);"
+    cpp_inject "    if (*p == '[') {"
+    cpp_inject "        bool neg = *(++p) == '!'; if (neg) p++;"
+    cpp_inject "        bool ok = false;"
+    cpp_inject "        while (*p && *p != ']') {"
+    cpp_inject "            if (*(p+1) == '-' && *(p+2) && *(p+2) != ']') {"
+    cpp_inject "                if (*s >= *p && *s <= *(p+2)) ok = true;"
+    cpp_inject "                p += 3;"
+    cpp_inject "            } else { if (*s == *p) ok = true; p++; }"
+    cpp_inject "        }"
+    cpp_inject "        if (*p == ']') p++;"
+    cpp_inject "        return (ok != neg) && *s && recurse(s+1, p, recurse);"
+    cpp_inject "    }"
+    cpp_inject "    return tolower(*s) == tolower(*p) && recurse(s+1, p+1, recurse);"
+    cpp_inject "};"
+    cpp_inject "result = match(s, p, match);"
+    return result
+
+fn filter(names: auto, pattern: string) -> auto:
+    result := []
+    for name in names:
+        if fnmatch(name, pattern):
+            cpp_inject "result.push_back(name);"
+    return result
+
+fn translate(pattern: string) -> string:
+    result: string := ""
+    cpp_inject "std::string r;"
+    cpp_inject "for (size_t i = 0; i < pattern.size(); i++) {"
+    cpp_inject "    char c = pattern[i];"
+    cpp_inject "    switch (c) {"
+    cpp_inject "        case '*': r += \".*\"; break;"
+    cpp_inject "        case '?': r += \".\"; break;"
+    cpp_inject "        case '.': case '+': case '^': case '$':"
+    cpp_inject "        case '(': case ')': case '{': case '}':"
+    cpp_inject "        case '|': case '\\\\': r += '\\\\'; r += c; break;"
+    cpp_inject "        default: r += c;"
+    cpp_inject "    }"
+    cpp_inject "}"
+    cpp_inject "result = r;"
+    return result

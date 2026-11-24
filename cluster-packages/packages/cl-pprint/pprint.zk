@@ -1,0 +1,11 @@
+fn pprint(obj: auto, indent: int = 2, width: int = 80, depth: auto = None):
+    put pformat(obj, indent, width, depth)
+
+fn pformat(obj: auto, indent: int = 2, width: int = 80, depth: auto = None) -> string:
+    result: string := ""
+    cpp_inject "std::function<std::string(const std::string&, int)> fmt;"
+    cpp_inject "fmt = [&](const std::string& val, int level) -> std::string {"
+    cpp_inject "    return val;"
+    cpp_inject "};"
+    cpp_inject "result = __to_str(obj);"
+    return result

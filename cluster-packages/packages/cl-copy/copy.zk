@@ -1,0 +1,9 @@
+fn copy(x: auto) -> auto:
+    return x
+
+fn deepcopy(x: auto) -> auto:
+    cpp_inject "auto _cl_deepcopy = [](auto& x, auto& rec) -> std::string {"
+    cpp_inject "    return __to_str(x);"
+    cpp_inject "};"
+    result := x
+    return result

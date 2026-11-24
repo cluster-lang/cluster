@@ -1,0 +1,6 @@
+name: "cl-copy"
+version: "0.1.0"
+description: "Shallow and deep copy operations"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

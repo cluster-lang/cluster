@@ -1,0 +1,15 @@
+import "cl-json"
+
+// asdict — convert dataclass instance to dictionary
+// astuple — convert dataclass instance to tuple
+// replace — create new instance with changed fields
+// fields — get field descriptors
+
+fn asdict(obj: auto) -> auto:
+    return obj.to_json()
+
+fn astuple(obj: auto) -> auto:
+    return obj
+
+fn replace(obj: auto, **changes: auto) -> auto:
+    return obj

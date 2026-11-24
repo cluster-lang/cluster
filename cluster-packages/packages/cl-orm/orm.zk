@@ -1,0 +1,20 @@
+import "cl-db"
+
+fn create_table(model: auto, db: string):
+    cpp_inject "// CREATE TABLE from model definition"
+
+fn insert(model: auto, table: string, db: string) -> int:
+    result := 0
+    cpp_inject "// INSERT INTO table VALUES ..."
+    return result
+
+fn select(table: string, db: string, where: string = "") -> auto:
+    cpp_inject "// SELECT * FROM table WHERE ..."
+    result := []
+    return result
+
+fn update(table: string, values: auto, where: string, db: string):
+    cpp_inject "// UPDATE table SET ... WHERE ..."
+
+fn delete_from(table: string, where: string, db: string):
+    cpp_inject "// DELETE FROM table WHERE ..."

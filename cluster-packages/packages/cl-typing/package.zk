@@ -1,0 +1,6 @@
+name: "cl-typing"
+version: "0.1.0"
+description: "Type hints and aliases (Optional, List, Dict, Union, Any)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

@@ -154,6 +154,10 @@ if [ -d "$SOURCE_DIR/lib" ]; then
     mkdir -p "$SHARE_DIR/lib"
     cp -rf "$SOURCE_DIR/lib/"* "$SHARE_DIR/lib/" 2>/dev/null || true
 fi
+if [ -d "$SOURCE_DIR/cluster-packages" ]; then
+    mkdir -p "$SHARE_DIR/packages"
+    cp -rf "$SOURCE_DIR/cluster-packages/"* "$SHARE_DIR/packages/" 2>/dev/null || true
+fi
 
 # --- 4. Configure PATH in Shell Profile ---
 ADD_PATH_LINE="export PATH=\"\$PATH:$INSTALL_DIR\""

@@ -1,0 +1,9 @@
+name: "cl-web"
+version: "0.1.0"
+description: "Web framework (routes, JSON API, static files, CORS)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-json@0.1.0"]
+cpp_requires:
+  - "crow"
+EOP

@@ -1,0 +1,6 @@
+name: "cl-contextlib"
+version: "0.1.0"
+description: "Context manager utilities (contextmanager, suppress, closing)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

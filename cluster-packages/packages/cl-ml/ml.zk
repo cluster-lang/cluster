@@ -1,0 +1,27 @@
+import "cl-numpy"
+
+fn knn(train: auto, labels: auto, test: auto, k: int = 3) -> auto:
+    cpp_inject "// Simple KNN using mlpack"
+    cpp_inject "// mlpack::neighbor::KNN knn(train);"
+    result := 0
+    return result
+
+fn pca(data: auto, n_components: int = 2) -> auto:
+    cpp_inject "// PCA dimension reduction"
+    result := 0
+    return result
+
+fn kmeans(data: auto, k: int = 3, max_iter: int = 100) -> auto:
+    cpp_inject "// K-means clustering"
+    result := 0
+    return result
+
+fn normalize(data: auto) -> auto:
+    cpp_inject "// Normalize data to zero mean, unit variance"
+    result := 0
+    return result
+
+fn train_test_split(data: auto, labels: auto, test_size: double = 0.2) -> auto:
+    cpp_inject "// Split data into train/test sets"
+    result := 0
+    return result

@@ -1,0 +1,6 @@
+name: "cl-dataclasses"
+version: "0.1.0"
+description: "Data class decorator and utilities"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-json@0.1.0"]

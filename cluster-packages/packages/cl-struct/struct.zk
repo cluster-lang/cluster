@@ -1,0 +1,48 @@
+fn calcsize(fmt: string) -> int:
+    result := 0
+    cpp_inject "int sz = 0;"
+    cpp_inject "for (char c : fmt) {"
+    cpp_inject "    switch (c) {"
+    cpp_inject "        case 'b': case 'B': sz += 1; break;"
+    cpp_inject "        case 'h': case 'H': sz += 2; break;"
+    cpp_inject "        case 'i': case 'I': case 'l': case 'L': sz += 4; break;"
+    cpp_inject "        case 'q': case 'Q': sz += 8; break;"
+    cpp_inject "        case 'f': sz += 4; break;"
+    cpp_inject "        case 'd': sz += 8; break;"
+    cpp_inject "        case 's': sz += 1; break;"
+    cpp_inject "    }"
+    cpp_inject "}"
+    cpp_inject "result = sz;"
+    return result
+
+fn pack(fmt: string, a: int = 0, b: int = 0, c: int = 0, d: int = 0) -> string:
+    result: string := ""
+    cpp_inject "std::string r(calcsize(fmt), '\0');"
+    cpp_inject "size_t off = 0;"
+    cpp_inject "int vals[] = {a, b, c, d};"
+    cpp_inject "int vi = 0;"
+    cpp_inject "for (char f : fmt) {"
+    cpp_inject "    int v = vals[vi++];"
+    cpp_inject "    switch (f) {"
+    cpp_inject "        case 'b': r[off++] = (char)v; break;"
+    cpp_inject "        case 'h': r[off++] = v & 0xFF; r[off++] = (v >> 8) & 0xFF; break;"
+    cpp_inject "        case 'i': for (int i = 0; i < 4; i++) { r[off++] = (v >> (i*8)) & 0xFF; } break;"
+    cpp_inject "    }"
+    cpp_inject "}"
+    cpp_inject "result = r;"
+    return result
+
+fn unpack(fmt: string, data: string) -> auto:
+    result := []
+    cpp_inject "size_t off = 0;"
+    cpp_inject "for (char f : fmt) {"
+    cpp_inject "    int v = 0;"
+    cpp_inject "    switch (f) {"
+    cpp_inject "        case 'b': v = (signed char)data[off++]; break;"
+    cpp_inject "        case 'B': v = (unsigned char)data[off++]; break;"
+    cpp_inject "        case 'h': v = (signed char)data[off] | ((signed char)data[off+1] << 8); off += 2; break;"
+    cpp_inject "        case 'i': for (int i = 0; i < 4; i++) { v |= (unsigned char)data[off++] << (i*8); } break;"
+    cpp_inject "    }"
+    cpp_inject "    result.push_back(v);"
+    cpp_inject "}"
+    return result

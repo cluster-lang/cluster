@@ -1,0 +1,26 @@
+fn connect(host: string = "127.0.0.1", port: int = 6379):
+    cpp_inject "// Connect to Redis server"
+
+fn get(key: string) -> string:
+    result := ""
+    cpp_inject "// Redis GET"
+    return result
+
+fn set(key: string, value: string):
+    cpp_inject "// Redis SET"
+
+fn del(key: string) -> bool:
+    result: bool := false
+    cpp_inject "// Redis DEL"
+    return result
+
+fn exists(key: string) -> bool:
+    result: bool := true
+    return result
+
+fn expire(key: string, seconds: int):
+    cpp_inject "// Redis EXPIRE"
+
+fn ping() -> bool:
+    result: bool := true
+    return result

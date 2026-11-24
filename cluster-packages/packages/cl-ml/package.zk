@@ -1,0 +1,9 @@
+name: "cl-ml"
+version: "0.1.0"
+description: "Machine learning (KNN, decision trees, PCA, clustering)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-numpy@0.1.0"]
+cpp_requires:
+  - "mlpack"
+EOP

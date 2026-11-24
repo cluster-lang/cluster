@@ -1,0 +1,31 @@
+import "cl-crypto"
+import "cl-binascii"
+import "cl-secrets"
+
+model HMAC:
+    key: string
+    msg: string
+    digestmod: string
+
+fn create(key: string, msg: string = "", digestmod: string = "sha256") -> HMAC:
+    return HMAC(key, msg, digestmod)
+
+fn digest(h: HMAC) -> string:
+    result: string := ""
+    cpp_inject "std::string k = h.key;"
+    cpp_inject "std::string m = h.msg;"
+    cpp_inject "// HMAC: H((k' ^ opad) || H((k' ^ ipad) || m))"
+    cpp_inject "unsigned char kp[64] = {0};"
+    cpp_inject "for (size_t i = 0; i < k.size() && i < 64; i++) kp[i] = k[i];"
+    cpp_inject "unsigned char ipad[64], opad[64];"
+    cpp_inject "for (int i = 0; i < 64; i++) { ipad[i] = kp[i] ^ 0x36; opad[i] = kp[i] ^ 0x5C; }"
+    cpp_inject "// Inner hash: sha256(ipad || msg)"
+    cpp_inject "std::string inner_input((char*)ipad, 64); inner_input += m;"
+    cpp_inject "std::string inner = ::hash(inner_input);"
+    cpp_inject "// Outer hash: sha256(opad || inner)"
+    cpp_inject "std::string outer_input((char*)opad, 64); outer_input += inner;"
+    cpp_inject "result = ::hash(outer_input);"
+    return result
+
+fn hexdigest(h: HMAC) -> string:
+    return hexlify(digest(h))

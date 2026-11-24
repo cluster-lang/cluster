@@ -1,0 +1,39 @@
+import "cl-numpy"
+import "cl-fs"
+
+fn read_csv(path: string) -> auto:
+    cpp_inject "#include <fstream>"
+    cpp_inject "#include <sstream>"
+    cpp_inject "std::ifstream f(path);"
+    cpp_inject "std::vector<std::string> cols;"
+    cpp_inject "std::vector<std::vector<double>> rows;"
+    cpp_inject "std::string line;"
+    cpp_inject "if (std::getline(f, line)) {"
+    cpp_inject "    std::stringstream ss(line);"
+    cpp_inject "    std::string cell;"
+    cpp_inject "    while (std::getline(ss, cell, ',')) cols.push_back(cell);"
+    cpp_inject "}"
+    cpp_inject "while (std::getline(f, line)) {"
+    cpp_inject "    std::stringstream ss(line);"
+    cpp_inject "    std::vector<double> row;"
+    cpp_inject "    std::string cell;"
+    cpp_inject "    while (std::getline(ss, cell, ',')) row.push_back(std::stod(cell));"
+    cpp_inject "    rows.push_back(row);"
+    cpp_inject "}"
+    result := 0
+    return result
+
+fn shape(df: auto) -> auto:
+    result := []
+    return result
+
+fn head(df: auto, n: int = 5) -> auto:
+    return df
+
+fn mean(df: auto) -> auto:
+    result := []
+    return result
+
+fn to_csv(df: auto, path: string):
+    cpp_inject "std::ofstream f(path);"
+    cpp_inject "f << \"CSV output\";"

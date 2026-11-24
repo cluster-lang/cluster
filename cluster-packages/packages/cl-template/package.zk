@@ -1,0 +1,6 @@
+name: "cl-template"
+version: "0.1.0"
+description: "String templates with $var and ${var} substitution"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

@@ -1,0 +1,6 @@
+name: "cl-pprint"
+version: "0.1.0"
+description: "Pretty-print nested data structures"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

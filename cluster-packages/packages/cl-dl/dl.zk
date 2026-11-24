@@ -1,0 +1,42 @@
+import "cl-numpy"
+
+fn tensor(data: auto) -> auto:
+    cpp_inject "// Convert data to torch::Tensor"
+    result := 0
+    return result
+
+fn zeros(shape: auto) -> auto:
+    cpp_inject "// Create zero tensor"
+    result := 0
+    return result
+
+fn ones(shape: auto) -> auto:
+    cpp_inject "// Create ones tensor"
+    result := 0
+    return result
+
+fn randn(shape: auto) -> auto:
+    cpp_inject "// Create random normal tensor"
+    result := 0
+    return result
+
+fn matmul(a: auto, b: auto) -> auto:
+    cpp_inject "// Matrix multiply"
+    result := 0
+    return result
+
+fn relu(x: auto) -> auto:
+    cpp_inject "x = torch::relu(x);"
+    return x
+
+fn sigmoid(x: auto) -> auto:
+    cpp_inject "x = torch::sigmoid(x);"
+    return x
+
+fn save_model(model: auto, path: string):
+    cpp_inject "torch::save(model, path);"
+
+fn load_model(path: string) -> auto:
+    cpp_inject "// Load torch model"
+    result := 0
+    return result

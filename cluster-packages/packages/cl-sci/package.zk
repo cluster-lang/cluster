@@ -1,0 +1,9 @@
+name: "cl-sci"
+version: "0.1.0"
+description: "Scientific computing (interpolation, FFT, special functions, stats)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: ["cl-numpy@0.1.0"]
+cpp_requires:
+  - "gsl"
+EOP

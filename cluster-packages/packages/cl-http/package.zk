@@ -1,0 +1,6 @@
+# package.zk — cl-http
+name: cl-http
+version: 0.1.0
+description: "HTTP client and server wrappers"
+license: MIT
+dependencies: []

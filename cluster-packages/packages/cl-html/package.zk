@@ -1,0 +1,6 @@
+name: "cl-html"
+version: "0.1.0"
+description: "HTML templating engine"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

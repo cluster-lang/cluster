@@ -1,0 +1,6 @@
+name: "cl-fnmatch"
+version: "0.1.0"
+description: "Unix filename pattern matching (glob/fnmatch)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []

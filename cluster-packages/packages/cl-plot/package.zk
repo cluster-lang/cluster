@@ -1,0 +1,9 @@
+name: "cl-plot"
+version: "0.1.0"
+description: "Matplotlib-like plotting (line, scatter, histogram, save)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []
+cpp_requires:
+  - "matplotplusplus"
+EOP

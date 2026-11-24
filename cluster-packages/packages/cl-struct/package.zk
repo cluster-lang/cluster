@@ -1,0 +1,6 @@
+name: "cl-struct"
+version: "0.1.0"
+description: "Pack/unpack binary data (struct-like)"
+license: "Commercial Control and non copy license"
+author: "Cluster Authors"
+dependencies: []
