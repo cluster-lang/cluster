@@ -121,6 +121,197 @@ clearBtn.addEventListener("click", () => {
   timingBadge.innerText = "Terminal cleared";
 });
 
+// Robust Client-Side Cluster Runtime & Interpreter for Playground
+function executeClusterCode(code) {
+  let output = "";
+  const models = {};
+  const fns = {};
+
+  const lines = code.split("\n");
+  let inFn = null;
+  let inModel = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
+    const trimmed = raw.trim();
+    if (!trimmed || trimmed.startsWith("//")) continue;
+
+    if (trimmed.startsWith("model ")) {
+      const match = trimmed.match(/^model\s+([A-Za-z0-9_]+):/);
+      if (match) {
+        inModel = match[1];
+        models[inModel] = {};
+        continue;
+      }
+    }
+    if (inModel) {
+      if (raw.startsWith("    ") || raw.startsWith("\t")) {
+        const parts = trimmed.split(":");
+        const fieldName = parts[0].trim();
+        let defaultVal = "";
+        if (parts[1] && parts[1].includes(":=")) {
+          const valPart = parts[1].split(":=")[1].trim();
+          defaultVal = valPart.replace(/^"|"$/g, "");
+          if (!isNaN(Number(defaultVal))) defaultVal = Number(defaultVal);
+          if (defaultVal === "true") defaultVal = true;
+          if (defaultVal === "false") defaultVal = false;
+        } else if (parts[1] && parts[1].includes("vector")) {
+          defaultVal = [];
+        }
+        models[inModel][fieldName] = defaultVal;
+        continue;
+      } else {
+        inModel = null;
+      }
+    }
+
+    if (trimmed.startsWith("fn ")) {
+      const match = trimmed.match(/^fn\s+([A-Za-z0-9_]+)\s*\((.*?)\)(?:\s*->\s*[A-Za-z0-9_]+)?:/);
+      if (match) {
+        inFn = match[1];
+        const params = match[2].split(",").map(p => p.trim().split(":")[0].trim()).filter(Boolean);
+        fns[inFn] = { params, body: [] };
+        continue;
+      }
+    }
+    if (inFn) {
+      if (raw.startsWith("    ") || raw.startsWith("\t")) {
+        fns[inFn].body.push(trimmed);
+        continue;
+      } else {
+        inFn = null;
+      }
+    }
+  }
+
+  function evalExpr(expr, scope) {
+    expr = expr.trim();
+    if (!expr) return "";
+
+    // String interpolation %{var}
+    expr = expr.replace(/%\{([A-Za-z0-9_]+)\}/g, (_, v) => {
+      return scope[v] !== undefined ? scope[v] : "";
+    });
+
+    // to_text helper
+    expr = expr.replace(/to_text\((.*?)\)/g, (_, inner) => {
+      return "String(" + inner + ")";
+    });
+
+    // list_size helper
+    expr = expr.replace(/list_size\((.*?)\)/g, (_, inner) => {
+      return "(" + inner + ".length)";
+    });
+
+    // Model instantiations
+    for (const m in models) {
+      const regex = new RegExp("\\b" + m + "\\(\\)", "g");
+      expr = expr.replace(regex, "Object.assign({}, __models." + m + ")");
+    }
+    expr = expr.replace(/vector\[[A-Za-z0-9_]+\]\(\)/g, "[]");
+
+    // Replace function calls
+    for (const f in fns) {
+      const regex = new RegExp("\\b" + f + "\\(", "g");
+      expr = expr.replace(regex, "__fns." + f + "(");
+    }
+
+    try {
+      const contextKeys = Object.keys(scope);
+      const contextVals = Object.values(scope);
+      const fnRunner = new Function("__models", "__fns", ...contextKeys, "return (" + expr + ");");
+      return fnRunner(models, callableFns, ...contextVals);
+    } catch (e) {
+      return expr;
+    }
+  }
+
+  const callableFns = {};
+  for (const f in fns) {
+    callableFns[f] = (...args) => {
+      const localScope = {};
+      fns[f].params.forEach((p, idx) => {
+        localScope[p] = args[idx];
+      });
+      return execBlock(fns[f].body, localScope);
+    };
+  }
+
+  function execBlock(bodyLines, scope) {
+    for (let i = 0; i < bodyLines.length; i++) {
+      const line = bodyLines[i].trim();
+      if (!line || line.startsWith("//")) continue;
+
+      if (line.startsWith("if ") && line.endsWith(":")) {
+        const cond = line.substring(3, line.length - 1);
+        const ifVal = evalExpr(cond, scope);
+        if (ifVal) {
+          const nextLine = bodyLines[++i].trim();
+          if (nextLine.startsWith("return ")) {
+            return evalExpr(nextLine.substring(7), scope);
+          }
+        } else {
+          i++;
+        }
+        continue;
+      }
+
+      if (line.startsWith("return ")) {
+        return evalExpr(line.substring(7), scope);
+      }
+
+      if (line.startsWith("put(") && line.endsWith(")")) {
+        const inner = line.substring(4, line.length - 1);
+        const val = evalExpr(inner, scope);
+        output += val + "\n";
+        continue;
+      }
+
+      if (line.startsWith("println(") && line.endsWith(")")) {
+        const inner = line.substring(8, line.length - 1);
+        const val = evalExpr(inner, scope);
+        output += val + "\n";
+        continue;
+      }
+
+      if (line.startsWith("list_push(") && line.endsWith(")")) {
+        const inner = line.substring(10, line.length - 1);
+        const [vecName, valExpr] = inner.split(",").map(s => s.trim());
+        const val = evalExpr(valExpr, scope);
+        if (vecName.includes(".")) {
+          const parts = vecName.split(".");
+          if (scope[parts[0]] && scope[parts[0]][parts[1]]) {
+            scope[parts[0]][parts[1]].push(val);
+          }
+        } else if (scope[vecName]) {
+          scope[vecName].push(val);
+        }
+        continue;
+      }
+
+      if (line.includes(":=") || line.includes("=")) {
+        const delim = line.includes(":=") ? ":=" : "=";
+        const [lhs, rhs] = line.split(delim).map(s => s.trim());
+        const cleanLhs = lhs.replace(/^[A-Za-z0-9_]+\s*:\s*vector\[.*?\]\s*:=/, "").replace(/^let\s+mut\s+/, "").split(":")[0].trim();
+        const val = evalExpr(rhs, scope);
+        if (cleanLhs.includes(".")) {
+          const [obj, prop] = cleanLhs.split(".");
+          if (scope[obj]) scope[obj][prop] = val;
+        } else {
+          scope[cleanLhs] = val;
+        }
+        continue;
+      }
+    }
+    return null;
+  }
+
+  if (fns["main"]) {
+    callableFns["main"]();
+  }
+  return output;
+}
+
 function runCode() {
   const code = editor.value;
   terminal.innerText = "[*] Compiling with Cluster v1.0.0 (LLVM 23.0 WASM target)...\n";
@@ -130,39 +321,19 @@ function runCode() {
 
   setTimeout(() => {
     try {
-      // Simulate/execute WASM outputs
+      const execResult = executeClusterCode(code);
       const duration = (performance.now() - startTime).toFixed(1);
       let output = "Finished build [-O3] target wasm32-wasi in " + duration + "ms\n";
       output += "---------------------------------------------------------\n";
-
-      // Basic lightweight evaluation of print statements for online playground demo
-      const lines = code.split("\n");
-      let executedLines = 0;
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (trimmed.startsWith("put(") && trimmed.endsWith(")")) {
-          let inner = trimmed.substring(4, trimmed.length - 1);
-          if (inner.startsWith('"') && inner.endsWith('"')) {
-            output += inner.substring(1, inner.length - 1) + "\n";
-            executedLines++;
-          } else {
-            output += ">> " + inner + "\n";
-            executedLines++;
-          }
-        }
-      }
-
-      if (executedLines === 0) {
-        output += "[Program exited successfully with code 0]\n";
-      }
+      output += execResult || "[Program completed with zero output (exit 0)]\n";
 
       terminal.innerText = output;
       timingBadge.innerText = "Success (exit 0) in " + duration + "ms";
     } catch (err) {
-      terminal.innerText = "Compile Error: " + err.message;
+      terminal.innerText = "Runtime Error: " + err.message;
       timingBadge.innerText = "Error";
     }
-  }, 80);
+  }, 45);
 }
 
 runBtn.addEventListener("click", runCode);
