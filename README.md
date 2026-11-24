@@ -24,12 +24,17 @@ Cluster is a modern compiled systems programming language engineered for uncompr
 
 ## 🚀 Quickstart
 
-### 1. Installation
+### 1. Automated Universal Installation (Linux, macOS, Windows/WSL, Android Termux)
+
+Install the Cluster toolchain (`cl`), standard library (`std/`), and official VS Code extension in a single command:
 
 ```bash
-# Add Cluster toolchain to your PATH
-export PATH="/path/to/cluster/bin:$PATH"
+curl -fsSL https://raw.githubusercontent.com/cluster-lang/cluster/main/install.sh | bash
 ```
+
+* **Universal Multi-Platform Support:** Automatically detects Linux, macOS, Windows (Git Bash/MSYS2/WSL), and Android Termux.
+* **Instant Colorful VS Code Integration:** Automatically installs the official [vscode-cluster](https://github.com/cluster-lang/vscode-cluster) extension directly into your local editor (`~/.vscode`, VS Code Server, Cursor, and VSCodium) for complete syntax highlighting and language configurations out of the box when writing `.cl`, `.zk`, and `.cld` files.
+* **Zero Configuration:** Provisions compiler binaries (`cl`, `zk`, `cluster`) and sets up standard library paths in your shell profile (`.bashrc`, `.zshrc`, `config.fish`).
 
 Verify your installation:
 ```bash
@@ -112,3 +117,6 @@ This software is released under the **Cluster Community & Fair-Source License (C
 - **Commercial Enterprise License Required:**
   - Commercial companies, startups, and for-profit businesses using Cluster or its binaries in revenue-generating operations or proprietary commercial products must acquire a commercial license.
   - Contact: **`zkalamgir@proton.me`** (`mohammadzaid/(cluster)`).
+
+
+  

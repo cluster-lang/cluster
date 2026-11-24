@@ -1,139 +1,269 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Cluster Language v1.0.0 Unified Installer (Linux & macOS)
-# Installs 'zk' developer CLI, 'zkc2' native compiler, and core standard library.
+# Cluster Language Toolchain & VS Code Extension Universal Installer
+# Compatible with: Linux, macOS, Windows (Git Bash/MSYS2/WSL), and Android Termux
+# Author: zk-mohammad <ZaidKhan-alamgir@proton.me>
+# License: Cluster Community & Fair-Source License (CCFL v2.0)
 # ==============================================================================
 
 set -euo pipefail
 
-REPO="cl-andro/cluster-lang"
+REPO_OWNER="cluster-lang"
+REPO_NAME="cluster"
+EXT_REPO_NAME="vscode-cluster"
 VERSION="1.0.0"
-BIN_NAME="zk"
 
-# --- Detect OS and Architecture ---
-OS="$(uname -s)"
-ARCH="$(uname -m)"
+echo "=================================================================="
+echo "    Installing Cluster Language Toolchain & Developer Tools       "
+echo "=================================================================="
 
-case "$OS" in
-  Linux)  OS="linux" ;;
-  Darwin) OS="macos" ;;
-  *)      echo "Unsupported OS: $OS"; exit 1 ;;
-esac
+# --- 1. Detect OS, Environment, and Architecture ---
+OS="$(uname -s 2>/dev/null || echo "Unknown")"
+ARCH="$(uname -m 2>/dev/null || echo "Unknown")"
+IS_TERMUX=0
+IS_WINDOWS=0
 
-case "$ARCH" in
-  x86_64|amd64) ARCH="x86_64" ;;
-  aarch64|arm64) ARCH="aarch64" ;;
-  *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
-esac
-
-echo "Detected Platform: $OS-$ARCH"
-
-# --- Determine Install Directories ---
-if [ -d "$HOME/.local/bin" ] && [ -w "$HOME/.local/bin" ]; then
-    INSTALL_DIR="$HOME/.local/bin"
-elif [ -d "$HOME/.local/bin" ]; then
-    mkdir -p "$HOME/.local/bin"
-    INSTALL_DIR="$HOME/.local/bin"
-elif [ -w "/usr/local/bin" ]; then
-    INSTALL_DIR="/usr/local/bin"
+if [ -n "${TERMUX_VERSION:-}" ] || [ -d "/data/data/com.termux" ] || [ -n "${PREFIX:-}" ]; then
+    IS_TERMUX=1
+    PLATFORM="termux"
+elif [ -n "${WSL_DISTRO_NAME:-}" ]; then
+    PLATFORM="linux-wsl"
 else
-    mkdir -p "$HOME/.local/bin"
-    INSTALL_DIR="$HOME/.local/bin"
+    case "$OS" in
+        Linux)   PLATFORM="linux" ;;
+        Darwin)  PLATFORM="macos" ;;
+        CYGWIN*|MINGW*|MSYS*|Windows_NT)
+            PLATFORM="windows"
+            IS_WINDOWS=1
+            ;;
+        *)
+            PLATFORM="linux"
+            ;;
+    esac
 fi
 
-SHARE_DIR="$HOME/.local/share/cluster"
+case "$ARCH" in
+    x86_64|amd64)   ARCH_NAME="x86_64" ;;
+    aarch64|arm64)  ARCH_NAME="aarch64" ;;
+    armv7l|armhf)   ARCH_NAME="armv7" ;;
+    i386|i686)      ARCH_NAME="x86" ;;
+    *)              ARCH_NAME="$ARCH" ;;
+esac
+
+echo "[*] Detected Platform:     $PLATFORM"
+echo "[*] Detected Architecture: $ARCH_NAME"
+
+# --- 2. Determine Installation Directories ---
+if [ "$IS_TERMUX" -eq 1 ]; then
+    PREFIX_PATH="${PREFIX:-/data/data/com.termux/files/usr}"
+    INSTALL_DIR="$PREFIX_PATH/bin"
+    SHARE_DIR="$PREFIX_PATH/share/cluster"
+elif [ -w "/usr/local/bin" ] && [ -d "/usr/local/bin" ]; then
+    INSTALL_DIR="/usr/local/bin"
+    SHARE_DIR="$HOME/.local/share/cluster"
+else
+    INSTALL_DIR="$HOME/.local/bin"
+    SHARE_DIR="$HOME/.local/share/cluster"
+fi
+
 mkdir -p "$INSTALL_DIR"
 mkdir -p "$SHARE_DIR"
 
-echo "Binary Target:  $INSTALL_DIR"
-echo "Package Target: $SHARE_DIR"
+echo "[*] Toolchain Binary Dir:  $INSTALL_DIR"
+echo "[*] Core Libraries Dir:    $SHARE_DIR"
 
-# --- Ensure INSTALL_DIR is in PATH ---
-case "${SHELL:-bash}" in
-    */zsh)   RC_FILE="$HOME/.zshrc" ;;
-    */fish)  RC_FILE="$HOME/.config/fish/config.fish" ;;
-    *)       RC_FILE="$HOME/.bashrc" ;;
-esac
+# --- 3. Install Compiler and Standard Library ---
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || echo "")"
+TEMP_DIR=""
 
-case "${SHELL:-bash}" in
-    */fish)  LINE="fish_add_path $INSTALL_DIR" ;;
-    *)       LINE="export PATH=\"\$PATH:$INSTALL_DIR\"" ;;
-esac
-
-if ! echo "$PATH" | tr ':' '\n' | grep -qx "$INSTALL_DIR"; then
-    if [ -f "$RC_FILE" ] && ! grep -sq "$INSTALL_DIR" "$RC_FILE"; then
-        echo "$LINE" >> "$RC_FILE"
-        echo "Added $INSTALL_DIR to PATH in $RC_FILE"
+if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
+    echo "[*] Installing from local repository ($SCRIPT_DIR)..."
+    SOURCE_DIR="$SCRIPT_DIR"
+elif [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/bin/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
+    echo "[*] Installing from local repository ($SCRIPT_DIR)..."
+    SOURCE_DIR="$SCRIPT_DIR"
+else
+    echo "[*] Fetching Cluster toolchain from GitHub ($REPO_OWNER/$REPO_NAME)..."
+    TEMP_DIR="$(mktemp -d 2>/dev/null || mktemp -d -t 'cluster_install')"
+    trap 'if [ -n "$TEMP_DIR" ] && [ -d "$TEMP_DIR" ]; then rm -rf "$TEMP_DIR"; fi' EXIT
+    
+    if command -v git &>/dev/null; then
+        git clone --depth 1 "https://github.com/${REPO_OWNER}/${REPO_NAME}.git" "$TEMP_DIR/cluster"
+        SOURCE_DIR="$TEMP_DIR/cluster"
+    else
+        TAR_URL="https://github.com/${REPO_OWNER}/${REPO_NAME}/archive/refs/heads/main.tar.gz"
+        curl -fsSL "$TAR_URL" -o "$TEMP_DIR/cluster.tar.gz"
+        mkdir -p "$TEMP_DIR/cluster"
+        tar -xzf "$TEMP_DIR/cluster.tar.gz" -C "$TEMP_DIR/cluster" --strip-components=1
+        SOURCE_DIR="$TEMP_DIR/cluster"
     fi
 fi
 
-# --- Check Clang / LLVM Toolchain ---
-if ! command -v clang &>/dev/null && ! command -v g++ &>/dev/null; then
-    echo "Notice: Clang / LLVM is recommended for native compilation."
+# Copy binary
+if [ -f "$SOURCE_DIR/bin/cl" ]; then
+    cp -f "$SOURCE_DIR/bin/cl" "$INSTALL_DIR/cl"
+elif [ -f "$SOURCE_DIR/cl" ]; then
+    cp -f "$SOURCE_DIR/cl" "$INSTALL_DIR/cl"
 fi
 
-# --- Check if installing from local repo ---
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || echo "")"
-if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/zk" ] && [ -f "$SCRIPT_DIR/cluster_compiler/v2/cl-binary/zkc2.out" ]; then
-    echo "Found local Cluster repository. Installing directly from source tree..."
-    
-    # Copy binaries
-    cp "$SCRIPT_DIR/zk" "$INSTALL_DIR/zk"
-    cp "$SCRIPT_DIR/cluster_compiler/v2/cl-binary/zkc2.out" "$INSTALL_DIR/zkc2"
-    chmod +x "$INSTALL_DIR/zk" "$INSTALL_DIR/zkc2"
-    
-    # Backwards compatibility symlink
-    ln -sf "$INSTALL_DIR/zk" "$INSTALL_DIR/cluster-zk" 2>/dev/null || true
-    
-    # Copy runtime and standard library to share dir
-    mkdir -p "$SHARE_DIR/lib/runtime"
+# Copy cl2 compiler if present
+if [ -f "$SOURCE_DIR/bin/cl2" ]; then
+    cp -f "$SOURCE_DIR/bin/cl2" "$INSTALL_DIR/cl2"
+    chmod +x "$INSTALL_DIR/cl2" 2>/dev/null || true
+fi
+
+# Copy companion tools (clang, cl-link, cl-strip) if bundled
+if [ -f "$SOURCE_DIR/bin/clang" ]; then
+    mkdir -p "$SHARE_DIR/bin"
+    cp -f "$SOURCE_DIR/bin/clang" "$SHARE_DIR/bin/clang" 2>/dev/null || true
+    chmod +x "$SHARE_DIR/bin/clang" 2>/dev/null || true
+fi
+if [ -f "$SOURCE_DIR/bin/cl-link" ]; then
+    mkdir -p "$SHARE_DIR/bin"
+    cp -f "$SOURCE_DIR/bin/cl-link" "$SHARE_DIR/bin/cl-link" 2>/dev/null || true
+    chmod +x "$SHARE_DIR/bin/cl-link" 2>/dev/null || true
+fi
+if [ -f "$SOURCE_DIR/bin/cl-strip" ]; then
+    mkdir -p "$SHARE_DIR/bin"
+    cp -f "$SOURCE_DIR/bin/cl-strip" "$SHARE_DIR/bin/cl-strip" 2>/dev/null || true
+    chmod +x "$SHARE_DIR/bin/cl-strip" 2>/dev/null || true
+fi
+
+# Ensure executable permissions and compatibility symlinks
+chmod +x "$INSTALL_DIR/cl" 2>/dev/null || true
+ln -sf "$INSTALL_DIR/cl" "$INSTALL_DIR/cluster" 2>/dev/null || true
+ln -sf "$INSTALL_DIR/cl" "$INSTALL_DIR/zk" 2>/dev/null || true
+
+# Copy standard library and runtime
+if [ -d "$SOURCE_DIR/std" ]; then
     mkdir -p "$SHARE_DIR/std"
-    cp "$SCRIPT_DIR/cluster_compiler/v2/runtime/concurrency.o" "$SHARE_DIR/lib/runtime/" 2>/dev/null || true
-    cp "$SCRIPT_DIR/cluster_compiler/v2/runtime/concurrency.c" "$SHARE_DIR/lib/runtime/" 2>/dev/null || true
-    cp -r "$SCRIPT_DIR/std/"* "$SHARE_DIR/std/" 2>/dev/null || true
+    cp -rf "$SOURCE_DIR/std/"* "$SHARE_DIR/std/" 2>/dev/null || true
+fi
+if [ -d "$SOURCE_DIR/lib" ]; then
+    mkdir -p "$SHARE_DIR/lib"
+    cp -rf "$SOURCE_DIR/lib/"* "$SHARE_DIR/lib/" 2>/dev/null || true
+fi
+
+# --- 4. Configure PATH in Shell Profile ---
+ADD_PATH_LINE="export PATH=\"\$PATH:$INSTALL_DIR\""
+if [ "$IS_TERMUX" -eq 0 ] && [ "$INSTALL_DIR" != "/usr/local/bin" ]; then
+    case "${SHELL:-bash}" in
+        */zsh)   TARGET_RC="$HOME/.zshrc" ;;
+        */fish)  TARGET_RC="$HOME/.config/fish/config.fish" ;;
+        *)       TARGET_RC="$HOME/.bashrc" ;;
+    esac
+
+    if [ -f "$TARGET_RC" ]; then
+        if ! grep -sq "$INSTALL_DIR" "$TARGET_RC"; then
+            echo "" >> "$TARGET_RC"
+            echo "# Cluster Programming Language Toolchain" >> "$TARGET_RC"
+            if [[ "$TARGET_RC" == *"fish"* ]]; then
+                echo "fish_add_path $INSTALL_DIR" >> "$TARGET_RC"
+            else
+                echo "$ADD_PATH_LINE" >> "$TARGET_RC"
+            fi
+            echo "[*] Added $INSTALL_DIR to PATH in $TARGET_RC"
+        fi
+    fi
     
-    echo ""
-    echo "======================================================"
-    echo " Cluster v${VERSION} Installed Successfully!"
-    echo "======================================================"
-    "$INSTALL_DIR/zk" version
-    exit 0
+    # Also add to .profile if present
+    if [ -f "$HOME/.profile" ] && ! grep -sq "$INSTALL_DIR" "$HOME/.profile"; then
+        echo "$ADD_PATH_LINE" >> "$HOME/.profile"
+    fi
 fi
 
-# --- Download Standalone Distribution from GitHub Releases ---
-TAR_NAME="cluster-v${VERSION}-${OS}-${ARCH}.tar.gz"
-DOWNLOAD_URL="https://github.com/${REPO}/releases/download/v${VERSION}/${TAR_NAME}"
-TEMP_DIR=$(mktemp -d)
-trap 'rm -rf "$TEMP_DIR"' EXIT
+# --- 5. Install Official VS Code Extension for Colorful Syntax Experience ---
+echo "[*] Setting up official VS Code extension for Cluster (.cl, .zk, .cld)..."
 
-echo "Downloading Cluster v${VERSION} (${TAR_NAME})..."
-if command -v curl &>/dev/null; then
-    curl -fsSL "$DOWNLOAD_URL" -o "$TEMP_DIR/$TAR_NAME" || true
-elif command -v wget &>/dev/null; then
-    wget -q "$DOWNLOAD_URL" -O "$TEMP_DIR/$TAR_NAME" || true
+VSCODE_EXT_DIRS=(
+    "$HOME/.vscode/extensions"
+    "$HOME/.vscode-server/extensions"
+    "$HOME/.vscode-insiders/extensions"
+    "$HOME/.cursor/extensions"
+    "$HOME/.vscode-oss/extensions"
+)
+
+if [ -n "${USERPROFILE:-}" ] && [ -d "$USERPROFILE/.vscode" ]; then
+    VSCODE_EXT_DIRS+=("$USERPROFILE/.vscode/extensions")
 fi
 
-if [ ! -s "$TEMP_DIR/$TAR_NAME" ]; then
-    echo "Notice: Release archive not found online. Please clone repo and run ./install.sh locally."
-    exit 1
+EXT_DEST_NAME="cluster-lang.vscode-cluster-1.0.0"
+INSTALLED_VSCODE_COUNT=0
+
+# Locate extension source
+VSCODE_EXT_TMP=""
+if [ -d "$SOURCE_DIR/../vscode-cluster" ] && [ -f "$SOURCE_DIR/../vscode-cluster/package.json" ]; then
+    VSCODE_EXT_SOURCE="$SOURCE_DIR/../vscode-cluster"
+elif [ -d "/media/alamgir-zk/debian13-hdd/alamgir-zk/zk-company/cluster-lang-org/vscode-cluster" ]; then
+    VSCODE_EXT_SOURCE="/media/alamgir-zk/debian13-hdd/alamgir-zk/zk-company/cluster-lang-org/vscode-cluster"
+else
+    VSCODE_EXT_TMP="$(mktemp -d 2>/dev/null || mktemp -d -t 'cluster_vscode')"
+    if command -v git &>/dev/null; then
+        git clone --depth 1 "https://github.com/${REPO_OWNER}/${EXT_REPO_NAME}.git" "$VSCODE_EXT_TMP" 2>/dev/null || true
+    fi
+    VSCODE_EXT_SOURCE="$VSCODE_EXT_TMP"
 fi
 
-tar -xzf "$TEMP_DIR/$TAR_NAME" -C "$TEMP_DIR"
-EXTRACTED_DIR="$TEMP_DIR/cluster-v${VERSION}-${OS}-${ARCH}"
+if [ -d "$VSCODE_EXT_SOURCE" ] && [ -f "$VSCODE_EXT_SOURCE/package.json" ]; then
+    for ext_dir in "${VSCODE_EXT_DIRS[@]}"; do
+        if [ -d "$(dirname "$ext_dir")" ]; then
+            mkdir -p "$ext_dir/$EXT_DEST_NAME"
+            cp -rf "$VSCODE_EXT_SOURCE/package.json" "$ext_dir/$EXT_DEST_NAME/" 2>/dev/null || true
+            cp -rf "$VSCODE_EXT_SOURCE/language-configuration.json" "$ext_dir/$EXT_DEST_NAME/" 2>/dev/null || true
+            if [ -d "$VSCODE_EXT_SOURCE/syntaxes" ]; then
+                mkdir -p "$ext_dir/$EXT_DEST_NAME/syntaxes"
+                cp -rf "$VSCODE_EXT_SOURCE/syntaxes/"* "$ext_dir/$EXT_DEST_NAME/syntaxes/" 2>/dev/null || true
+            fi
+            if [ -d "$VSCODE_EXT_SOURCE/icons" ]; then
+                mkdir -p "$ext_dir/$EXT_DEST_NAME/icons"
+                cp -rf "$VSCODE_EXT_SOURCE/icons/"* "$ext_dir/$EXT_DEST_NAME/icons/" 2>/dev/null || true
+            fi
+            INSTALLED_VSCODE_COUNT=$((INSTALLED_VSCODE_COUNT + 1))
+        fi
+    done
+fi
 
-cp "$EXTRACTED_DIR/bin/zk" "$INSTALL_DIR/zk"
-cp "$EXTRACTED_DIR/bin/zkc2" "$INSTALL_DIR/zkc2"
-chmod +x "$INSTALL_DIR/zk" "$INSTALL_DIR/zkc2"
-ln -sf "$INSTALL_DIR/zk" "$INSTALL_DIR/cluster-zk" 2>/dev/null || true
+VSIX_FILE="$VSCODE_EXT_SOURCE/vscode-cluster-1.0.0.vsix"
+if [ -f "$VSIX_FILE" ]; then
+    if command -v code &>/dev/null; then
+        code --install-extension "$VSIX_FILE" --force &>/dev/null || true
+        INSTALLED_VSCODE_COUNT=$((INSTALLED_VSCODE_COUNT + 1))
+    fi
+    if command -v cursor &>/dev/null; then
+        cursor --install-extension "$VSIX_FILE" --force &>/dev/null || true
+        INSTALLED_VSCODE_COUNT=$((INSTALLED_VSCODE_COUNT + 1))
+    fi
+    if command -v codium &>/dev/null; then
+        codium --install-extension "$VSIX_FILE" --force &>/dev/null || true
+        INSTALLED_VSCODE_COUNT=$((INSTALLED_VSCODE_COUNT + 1))
+    fi
+fi
 
-cp -r "$EXTRACTED_DIR/lib" "$SHARE_DIR/"
-cp -r "$EXTRACTED_DIR/std" "$SHARE_DIR/"
+if [ -n "$VSCODE_EXT_TMP" ] && [ -d "$VSCODE_EXT_TMP" ]; then
+    rm -rf "$VSCODE_EXT_TMP"
+fi
+
+if [ "$INSTALLED_VSCODE_COUNT" -gt 0 ]; then
+    echo "[✓] VS Code Cluster extension installed and activated!"
+else
+    echo "[!] Notice: VS Code directory not found yet. Extension will activate as soon as VS Code is opened."
+fi
 
 echo ""
-echo "======================================================"
-echo " Cluster Language v${VERSION} Installed Successfully!"
-echo "======================================================"
-echo "  Run: zk --version"
-echo "  Run: zk run hello.zk"
+echo "=================================================================="
+echo "    ✓ Cluster Language v${VERSION} Installed Successfully!       "
+echo "=================================================================="
+echo "  Compiler Binary: $INSTALL_DIR/cl"
+echo "  Standard Lib:    $SHARE_DIR/std"
+echo "  VS Code Theme:   Full syntax highlighting ready for .cl, .zk, .cld"
 echo ""
-echo "If 'zk' is not found in your terminal, run: source $RC_FILE"
+echo "Quick Test:"
+echo "  $INSTALL_DIR/cl --version"
+echo ""
+echo "To activate in your current terminal, run:"
+if [ "$IS_TERMUX" -eq 1 ] || [ "$INSTALL_DIR" = "/usr/local/bin" ]; then
+    echo "  cl --version"
+else
+    echo "  export PATH=\"\$PATH:$INSTALL_DIR\""
+fi
+echo "=================================================================="
