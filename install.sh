@@ -73,13 +73,16 @@ echo "[*] Toolchain Binary Dir:  $INSTALL_DIR"
 echo "[*] Core Libraries Dir:    $SHARE_DIR"
 
 # --- 3. Install Compiler and Standard Library ---
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || echo "")"
+SCRIPT_DIR=""
+if [ -n "${BASH_SOURCE[0]:-}" ] && [ -f "${BASH_SOURCE[0]}" ]; then
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || echo "")"
+fi
 TEMP_DIR=""
 
-if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
+if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/bin/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
     echo "[*] Installing from local repository ($SCRIPT_DIR)..."
     SOURCE_DIR="$SCRIPT_DIR"
-elif [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/bin/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
+elif [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/cl" ] && [ -d "$SCRIPT_DIR/std" ]; then
     echo "[*] Installing from local repository ($SCRIPT_DIR)..."
     SOURCE_DIR="$SCRIPT_DIR"
 else
@@ -110,9 +113,17 @@ fi
 if [ -f "$SOURCE_DIR/bin/cl2" ]; then
     cp -f "$SOURCE_DIR/bin/cl2" "$INSTALL_DIR/cl2"
     chmod +x "$INSTALL_DIR/cl2" 2>/dev/null || true
+elif [ -f "$SOURCE_DIR/cl2" ]; then
+    cp -f "$SOURCE_DIR/cl2" "$INSTALL_DIR/cl2"
+    chmod +x "$INSTALL_DIR/cl2" 2>/dev/null || true
 fi
 
-# Copy companion tools (clang, cl-link, cl-strip) if bundled
+# Copy companion tools & shared libraries if present
+if [ -f "$SOURCE_DIR/bin/libclm_bridge.so" ]; then
+    cp -f "$SOURCE_DIR/bin/libclm_bridge.so" "$INSTALL_DIR/libclm_bridge.so" 2>/dev/null || true
+    mkdir -p "$SHARE_DIR/lib"
+    cp -f "$SOURCE_DIR/bin/libclm_bridge.so" "$SHARE_DIR/lib/libclm_bridge.so" 2>/dev/null || true
+fi
 if [ -f "$SOURCE_DIR/bin/clang" ]; then
     mkdir -p "$SHARE_DIR/bin"
     cp -f "$SOURCE_DIR/bin/clang" "$SHARE_DIR/bin/clang" 2>/dev/null || true
@@ -200,6 +211,11 @@ else
     VSCODE_EXT_TMP="$(mktemp -d 2>/dev/null || mktemp -d -t 'cluster_vscode')"
     if command -v git &>/dev/null; then
         git clone --depth 1 "https://github.com/${REPO_OWNER}/${EXT_REPO_NAME}.git" "$VSCODE_EXT_TMP" 2>/dev/null || true
+    fi
+    if [ ! -f "$VSCODE_EXT_TMP/package.json" ]; then
+        EXT_TAR_URL="https://github.com/${REPO_OWNER}/${EXT_REPO_NAME}/archive/refs/heads/main.tar.gz"
+        curl -fsSL "$EXT_TAR_URL" -o "$VSCODE_EXT_TMP/ext.tar.gz" 2>/dev/null || true
+        tar -xzf "$VSCODE_EXT_TMP/ext.tar.gz" -C "$VSCODE_EXT_TMP" --strip-components=1 2>/dev/null || true
     fi
     VSCODE_EXT_SOURCE="$VSCODE_EXT_TMP"
 fi
