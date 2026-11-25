@@ -34,8 +34,9 @@ dist/
 *.s
 *.lock
 
-# Allow runtime library object
+# Allow runtime library object and shared runtime
 !lib/runtime/*.o
+!lib/runtime/*.so
 
 # Logs and system artifacts
 *.log
