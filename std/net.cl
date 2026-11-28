@@ -12,8 +12,8 @@ fn tcp_accept(server_fd: int) -> int:
 fn tcp_read(client_fd: int, max_bytes: int) -> string:
     return net_read(client_fd, max_bytes)
 
-fn tcp_write(client_fd: int, data: string) -> int:
-    return net_write(client_fd, data)
+fn tcp_write(client_fd: int, payload: string) -> int:
+    return net_write(client_fd, payload)
 
 fn tcp_close(fd: int) -> void:
     net_close(fd)
