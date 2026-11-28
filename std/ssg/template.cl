@@ -4,8 +4,8 @@
 // Description: Compatibility wrapper routing legacy template calls through template_v2.cl.
 // ==============================================================================
 
-import "std/ssg/template_v2.cl"
-import "std/ssg/document.cl"
+import "src/template_v2.cl"
+import "src/document.cl"
 
 fn template_render_page(tr: TemplateRegistry, doc: SsgDocument, site_name: string, site_tagline: string) -> string:
     vars := dict[string, string]()

@@ -6,9 +6,9 @@
 //              and plain Markdown folders cleanly into Cluster-SSG projects.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/fs_walk.cl"
-import "std/ssg/config.cl"
+import "src/strbuf.cl"
+import "src/fs_walk.cl"
+import "src/config.cl"
 
 model ImportReport:
     pages_imported: int

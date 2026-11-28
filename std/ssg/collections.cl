@@ -6,8 +6,8 @@
 //              document's frontmatter types before build / check.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/document.cl"
+import "src/strbuf.cl"
+import "src/document.cl"
 
 model CollectionFieldRule:
     name: string

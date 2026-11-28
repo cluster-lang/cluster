@@ -6,15 +6,15 @@
 // ==============================================================================
 
 import "std/cld.cl"
-import "std/ssg/strbuf.cl"
-import "std/ssg/fs_walk.cl"
-import "std/ssg/config.cl"
-import "std/ssg/document.cl"
-import "std/ssg/template.cl"
-import "std/ssg/islands.cl"
-import "std/ssg/builder.cl"
-import "std/ssg/importer.cl"
-import "std/ssg/server.cl"
+import "src/strbuf.cl"
+import "src/fs_walk.cl"
+import "src/config.cl"
+import "src/document.cl"
+import "src/template.cl"
+import "src/islands.cl"
+import "src/builder.cl"
+import "src/importer.cl"
+import "src/server.cl"
 
 fn cli_print_banner() -> void:
     println("=================================================================")

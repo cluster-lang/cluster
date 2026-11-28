@@ -147,6 +147,26 @@ cl lsp
 ```
 Configure your editor (VS Code, Cursor, Neovim) to run `cl lsp` for language server features.
 
+### 9. Cluster Sandbox Micro-OS (`cl sandbox`)
+
+Compile and run Cluster programs inside an isolated 14 KB–24 KB freestanding x86-64 Multiboot micro-OS kernel inside QEMU with fail-closed host I/O stubs:
+
+```bash
+# Build a bare-metal micro-OS ELF image (with optional runtime vector bounds checking)
+cl sandbox build app.cl --safe-bounds -o app.sandbox.elf
+
+# Boot and run in isolated QEMU micro-VM
+cl sandbox run app.cl --mem 128M --timeout 10
+```
+
+### 10. Memory Bounds Safety (`--safe-bounds`)
+
+Enable deterministic runtime bounds checks on vector accesses during development or sandboxing:
+
+```bash
+cl build app.cl --safe-bounds -O3 -o app
+```
+
 ---
 
 ## 🌐 Interactive Browser Playground

@@ -5,7 +5,7 @@
 //              into a unified SsgConfig with CLI flag overrides.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
+import "src/strbuf.cl"
 
 model SsgConfig:
     site_name: string

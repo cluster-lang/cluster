@@ -6,9 +6,9 @@
 //              <style scoped> with deterministic .clx-<hash> CSS scoping.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/fs_walk.cl"
-import "std/ssg/markdown.cl"
+import "src/strbuf.cl"
+import "src/fs_walk.cl"
+import "src/markdown.cl"
 
 model ClxComponent:
     name: string

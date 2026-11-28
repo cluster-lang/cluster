@@ -4,11 +4,11 @@
 // Description: Standalone CLI entrypoint parsing argc/argv directly with zero Python.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/config.cl"
-import "std/ssg/cli.cl"
-import "std/ssg/importer.cl"
-import "std/ssg/builder.cl"
+import "src/strbuf.cl"
+import "src/config.cl"
+import "src/cli.cl"
+import "src/importer.cl"
+import "src/builder.cl"
 
 fn _main_apply_cli_flags(cfg: SsgConfig, start_idx: int, argc: int) -> void:
     let mut i: int = start_idx

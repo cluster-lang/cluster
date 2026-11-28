@@ -7,9 +7,9 @@
 //              View Transitions / prefetch micro-runtime.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/fs_walk.cl"
-import "std/ssg/document.cl"
+import "src/strbuf.cl"
+import "src/fs_walk.cl"
+import "src/document.cl"
 
 model IslandDefinition:
     name: string

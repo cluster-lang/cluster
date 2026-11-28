@@ -5,9 +5,9 @@
 //              URL routing, MIME detection, .clb binary wire streaming, and live-reload.
 // ==============================================================================
 
-import "std/ssg/strbuf.cl"
-import "std/ssg/fs_walk.cl"
-import "std/ssg/config.cl"
+import "src/strbuf.cl"
+import "src/fs_walk.cl"
+import "src/config.cl"
 
 model SsgServer:
     port: int

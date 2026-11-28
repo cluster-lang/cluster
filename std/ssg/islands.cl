@@ -4,4 +4,4 @@
 // Description: Compatibility wrapper routing legacy islands calls through islands_v2.cl.
 // ==============================================================================
 
-import "std/ssg/islands_v2.cl"
+import "src/islands_v2.cl"
